@@ -44,7 +44,13 @@
 			<HintPath>bin\UnigineSharp_x64.dll</HintPath>
 		</Reference>
 	</ItemGroup>
-	<ItemGroup/>
+	<ItemGroup>
+		<Compile Include="data/Plugins/ecslite-2022.11.22/src/filters.cs"/>
+		<Compile Include="data/Plugins/ecslite-2022.11.22/src/systems.cs"/>
+		<Compile Include="data/Plugins/ecslite-2022.11.22/src/entities.cs"/>
+		<Compile Include="data/Plugins/ecslite-2022.11.22/src/components.cs"/>
+		<Compile Include="data/Plugins/ecslite-2022.11.22/src/worlds.cs"/>
+	</ItemGroup>
 	<ItemGroup>
 		<Compile Include="source\AppEditorLogic.cs"/>
 		<Compile Include="source\AppSystemLogic.cs"/>
