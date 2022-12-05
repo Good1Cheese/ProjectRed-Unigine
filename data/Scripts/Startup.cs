@@ -15,19 +15,19 @@ public class Startup : Component
         _world = new();
         _systems = new(_world);
 
-        SubscribeInitials();
+        SubscribeInitiables();
         Initialized?.Invoke(_world, _systems);
 
         _systems.Init();
     }
 
-    private void SubscribeInitials()
+    private void SubscribeInitiables()
     {
-        var entitySpawners = node.GetComponents<IInitializable>();
+        var initiables = node.GetComponents<Initiable>();
 
-        foreach (var spawn in entitySpawners)
+        foreach (var initiable in initiables)
         {
-            Initialized += spawn.Init;
+            Initialized += initiable.Initialize;
         }
     }
 

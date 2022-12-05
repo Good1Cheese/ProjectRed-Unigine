@@ -50,20 +50,21 @@
 		<Compile Include="data/Plugins/ecslite-2022.11.22/src/entities.cs" />
 		<Compile Include="data/Plugins/ecslite-2022.11.22/src/components.cs" />
 		<Compile Include="data/Plugins/ecslite-2022.11.22/src/worlds.cs" />
+		<Compile Include="data\Scripts\EcsExtensions.cs" />
+		<Compile Include="data\Scripts\Initialiazers\Initiable.cs" />
+		<Compile Include="data\Scripts\Initialiazers\Player.cs" />
+		<Compile Include="data\Scripts\Initialiazers\Systems.cs" />
+		<Compile Include="data\Scripts\InputExtensions.cs" />
+		<Compile Include="data\Scripts\Movement\Movement.cs" />
+		<Compile Include="data\Scripts\Movement\MovementInputSystem.cs" />
+		<Compile Include="data\Scripts\Movement\MoveSystem.cs" />
 		<Compile Include="data\Scripts\Startup.cs" />
-		<Compile Include="data\Scripts\TestScript.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Include="source\AppEditorLogic.cs" />
 		<Compile Include="source\AppSystemLogic.cs" />
 		<Compile Include="source\AppWorldLogic.cs" />
 		<Compile Include="source\main.cs" />
-	</ItemGroup>
-	<ItemGroup>
-	  <None Include="data\Scripts\TestScript.cs.meta" />
-	</ItemGroup>
-	<ItemGroup>
-	  <PackageReference Include="Ninject" Version="3.3.6" />
 	</ItemGroup>
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
 		<Exec Command="&quot;$(DOTNET_HOST_PATH)&quot; &quot;$(OutputPath)cspropgen_x64d.dll&quot; -p &quot;$(OutputPath)$(AssemblyName).dll&quot; -data_path ../data/" Condition="'$(Configuration)'=='Debug' And $(SkipPostBuild)=='false'" />

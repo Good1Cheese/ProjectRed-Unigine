@@ -53,9 +53,12 @@
 		<Compile Include="data/Scripts/Startup.cs"/>
 		<Compile Include="data/Scripts/EcsExtensions.cs"/>
 		<Compile Include="data/Scripts/Movement/Movement.cs"/>
-		<Compile Include="data/Scripts/SystemsInit.cs"/>
-		<Compile Include="data/Scripts/Spawners/IInizializable.cs"/>
-		<Compile Include="data/Scripts/Spawners/PlayerInit.cs"/>
+		<Compile Include="data/Scripts/Movement/MoveSystem.cs"/>
+		<Compile Include="data/Scripts/InputExtensions.cs"/>
+		<Compile Include="data/Scripts/Movement/MovementInputSystem.cs"/>
+		<Compile Include="data/Scripts/Initialiazers/Player.cs"/>
+		<Compile Include="data/Scripts/Initialiazers/Systems.cs"/>
+		<Compile Include="data/Scripts/Initialiazers/Initiable.cs"/>
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Include="source\AppEditorLogic.cs"/>

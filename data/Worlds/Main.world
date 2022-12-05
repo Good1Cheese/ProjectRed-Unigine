@@ -744,10 +744,13 @@
 		<node type="NodeDummy" id="2128796429" name="Game">
 			<properties>
 				<property parent="ab233cb5e516269075fc48afd84b5e42744308b9" guid="ac6c42e5a8f2970037ea9e5f05b9d832afe4d9e9"/>
-				<property parent="6585e2fde7614838cc9dee37d0bcf62a2a362f81" guid="6394cc9c8fbf7f4b44334c2e93e225b5889dfb90">
-					<parameter name="_player">guid://d8a20baef14edf35b68c671083308f2f3a89f2c2</parameter>
+				<property parent="efaac500af98f45ff5d8363228e39fe99f75e834" guid="8435b120a3dbb1ff7969975240184e89d8568654"/>
+				<property parent="6585e2fde7614838cc9dee37d0bcf62a2a362f81" guid="20431442945b46b90b5040c41c7455535d715a96">
+					<parameter name="_nodeLink">guid://e9f0980ed39a4015b2d992704ec4030fa2121522</parameter>
+					<parameter name="_movement">
+						<parameter name="_speed">5</parameter>
+					</parameter>
 				</property>
-				<property parent="efaac500af98f45ff5d8363228e39fe99f75e834" guid="cb83eef779777fea8251ae416a5bb2ac9f138e1b"/>
 			</properties>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
 		</node>
