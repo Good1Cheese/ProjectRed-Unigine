@@ -3,6 +3,10 @@
 	<struct name="Movement">
 		<parameter name="_speed" type="float">0</parameter>
 	</struct>
+	<struct name="Rotation">
+		<parameter name="_speed" type="float">0</parameter>
+	</struct>
 	<parameter name="_nodeLink" type="file" filter=".node"/>
 	<parameter name="_movement" type="Movement"/>
+	<parameter name="_rotation" type="Rotation"/>
 </property>

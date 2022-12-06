@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <nodes version="2.16.0.2">
-	<node type="ObjectMeshStatic" id="1981560777" name="Player">
+	<node type="ObjectMeshStatic" id="142421510" name="Player">
 		<mesh_name>guid://40f273236109be269d66bf4dd9645848e0bc1f07</mesh_name>
 		<surface name="capsule" physics_friction="1" physics_restitution="1" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
 		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
-		<node type="PlayerDummy" id="1825190045" name="PlayerDummy">
+		<node type="PlayerDummy" id="162731697" name="PlayerDummy">
 			<znear>0.300000012</znear>
 			<zfar>100000</zfar>
 			<oblique_frustum_plane>0 0 -1 0</oblique_frustum_plane>
@@ -12,7 +12,7 @@
 			<is_main>1</is_main>
 			<is_listener>1</is_listener>
 			<controlled>1</controlled>
-			<transform>0.99984711 0.017486265 -1.6139822e-06 0.0 -0.00097429194 0.055801161 0.99844152 0.0 0.0174591 -0.99828881 0.055809665 0.0 0 -4 1 1.0</transform>
+			<transform>0.99999988 6.2154316e-11 -2.4286125e-17 0.0 -3.4694478e-18 3.5762795e-07 1.0000002 0.0 6.2154309e-11 -0.99999982 3.5762781e-07 0.0 0 0 0.75 1.0</transform>
 		</node>
 	</node>
 </nodes>

@@ -50,14 +50,19 @@
 		<Compile Include="data/Plugins/ecslite-2022.11.22/src/entities.cs" />
 		<Compile Include="data/Plugins/ecslite-2022.11.22/src/components.cs" />
 		<Compile Include="data/Plugins/ecslite-2022.11.22/src/worlds.cs" />
-		<Compile Include="data\Scripts\EcsExtensions.cs" />
-		<Compile Include="data\Scripts\Initialiazers\Initiable.cs" />
-		<Compile Include="data\Scripts\Initialiazers\Player.cs" />
-		<Compile Include="data\Scripts\Initialiazers\Systems.cs" />
-		<Compile Include="data\Scripts\InputExtensions.cs" />
+		<Compile Include="data\Scripts\CameraGetScript.cs" />
+		<Compile Include="data\Scripts\Extensions\EcsExtensions.cs" />
+		<Compile Include="data\Scripts\Extensions\InputExtensions.cs" />
+		<Compile Include="data\Scripts\GameObject.cs" />
+		<Compile Include="data\Scripts\Initiables\Entities\Player.cs" />
+		<Compile Include="data\Scripts\Initiables\Entities\Systems.cs" />
+		<Compile Include="data\Scripts\Initiables\Initiable.cs" />
+		<Compile Include="data\Scripts\Movement\MoveInputSystem.cs" />
 		<Compile Include="data\Scripts\Movement\Movement.cs" />
-		<Compile Include="data\Scripts\Movement\MovementInputSystem.cs" />
 		<Compile Include="data\Scripts\Movement\MoveSystem.cs" />
+		<Compile Include="data\Scripts\Rotate\RotateInputSystem.cs" />
+		<Compile Include="data\Scripts\Rotate\RotateSystem.cs" />
+		<Compile Include="data\Scripts\Rotate\Rotation.cs" />
 		<Compile Include="data\Scripts\Startup.cs" />
 	</ItemGroup>
 	<ItemGroup>
