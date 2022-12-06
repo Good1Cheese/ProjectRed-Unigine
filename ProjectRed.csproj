@@ -50,7 +50,6 @@
 		<Compile Include="data/Plugins/ecslite-2022.11.22/src/entities.cs" />
 		<Compile Include="data/Plugins/ecslite-2022.11.22/src/components.cs" />
 		<Compile Include="data/Plugins/ecslite-2022.11.22/src/worlds.cs" />
-		<Compile Include="data\Scripts\CameraGetScript.cs" />
 		<Compile Include="data\Scripts\Extensions\EcsExtensions.cs" />
 		<Compile Include="data\Scripts\Extensions\InputExtensions.cs" />
 		<Compile Include="data\Scripts\GameObject.cs" />
