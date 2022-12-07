@@ -30,7 +30,7 @@ public class MoveSystem : IEcsInitSystem, IEcsRunSystem
 
             var move = movement.Input * movement.Speed * Game.IFps;
 
-            gameObject.Node.Translate((vec3)move);
+            gameObject.Body.Translate((vec3)move);
         }
     }
 }
