@@ -35,6 +35,9 @@ public class MoveInputSystem : IEcsInitSystem, IEcsRunSystem
         _input.x = InputExtensions.GetAxis(Input.KEY.D, Input.KEY.A);
         _input.y = InputExtensions.GetAxis(Input.KEY.W, Input.KEY.S);
 
-        _input.Normalize();
+        if (_input.Length2 > 0)
+        {
+            _input.Normalize();
+        }
     }
 }
