@@ -6,7 +6,12 @@
 	<struct name="Rotation">
 		<parameter name="_speed" type="float">0</parameter>
 	</struct>
+	<struct name="Interaction">
+		<parameter name="_mask" type="mask">0</parameter>
+		<parameter name="_length" type="float">0</parameter>
+	</struct>
 	<parameter name="_nodeLink" type="file" filter=".node"/>
 	<parameter name="_movement" type="Movement"/>
 	<parameter name="_rotation" type="Rotation"/>
+	<parameter name="_interaction" type="Interaction"/>
 </property>

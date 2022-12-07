@@ -30,8 +30,8 @@ public class RotateSystem : IEcsInitSystem, IEcsRunSystem
 
             var move = -rotation.Input * rotation.Speed * Game.IFps;
 
-            gameObject.Node.Rotate(0, 0, move.x);
-            gameObject.Camera.Rotate(move.y, 0, 0);
+            gameObject.Body.Rotate(0, 0, move.x);
+            gameObject.Head.Rotate(move.y, 0, 0);
         }
     }
 }

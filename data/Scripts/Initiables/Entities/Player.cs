@@ -19,19 +19,24 @@ public class Player : Component, Initiable
     [ShowInEditor]
     private Rotation _rotation;
 
+    [ShowInEditor]
+    private Interaction _interaction;
+
     private GameObject _gameObject;
 
 
     public void Initialize(EcsWorld world, EcsSystems systems)
     {
-        Node node = _nodeLink.Load(vec3.UP);
-        var camera = node.GetChild(0) as PlayerDummy;
+        Node body = _nodeLink.Load(vec3.UP);
+        Node head = body.GetChild(0);
 
         int entity = world.NewEntity();
 
-        _gameObject = new(node, camera);
+        _gameObject = new(body, head);
+        _interaction.Intersection = new();
 
         world.Add(entity, _gameObject);
+        world.Add(entity, _interaction);
         world.Add(entity, _movement);
         world.Add(entity, _rotation);
     }

@@ -60,9 +60,11 @@
 		<Compile Include="data/Scripts/Mechanics/Rotate/Rotation.cs"/>
 		<Compile Include="data/Scripts/Mechanics/Rotate/RotateSystem.cs"/>
 		<Compile Include="data/Scripts/Mechanics/Rotate/RotateInputSystem.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Movement/Movement.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Movement/MoveInputSystem.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Movement/MoveSystem.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Interact/Interaction.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Move/Movement.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Move/MoveInputSystem.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Move/MoveSystem.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Interact/InteractSystem.cs"/>
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Include="source\AppEditorLogic.cs"/>

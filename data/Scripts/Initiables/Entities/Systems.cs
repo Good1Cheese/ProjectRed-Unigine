@@ -12,6 +12,7 @@ public class Systems : Component, Initiable
     {
         systems.Add(new MoveInputSystem());
         systems.Add(new RotateInputSystem());
+        systems.Add(new InteractSystem());
 
         systems.Add(new MoveSystem());
         systems.Add(new RotateSystem());

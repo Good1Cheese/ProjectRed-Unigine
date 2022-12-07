@@ -4,12 +4,12 @@ namespace ProjectRed.Mechanics.Object;
 
 public struct GameObject
 {
-    public GameObject(Node node, PlayerDummy camera)
+    public GameObject(Node node, Node cameraNode)
     {
-        Node = node;
-        Camera = camera;
+        Body = node;
+        Head = cameraNode;
     }
 
-    public Node Node { get; set; }
-    public PlayerDummy Camera { get; set; }
+    public Node Body { get; }
+    public Node Head { get; }
 }
