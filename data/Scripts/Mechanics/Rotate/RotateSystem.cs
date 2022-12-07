@@ -1,5 +1,8 @@
 ﻿using Leopotam.EcsLite;
+using ProjectRed.Mechanics.Object;
 using Unigine;
+
+namespace ProjectRed.Mechanics.Rotate;
 
 public class RotateSystem : IEcsInitSystem, IEcsRunSystem
 {

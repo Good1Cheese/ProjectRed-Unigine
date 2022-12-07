@@ -1,5 +1,8 @@
 ﻿using Leopotam.EcsLite;
+using ProjectRed.Mechanics.Object;
 using Unigine;
+
+namespace ProjectRed.Mechanics.Move;
 
 public class MoveSystem : IEcsInitSystem, IEcsRunSystem
 {

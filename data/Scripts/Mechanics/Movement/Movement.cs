@@ -1,8 +1,10 @@
-using System;
+﻿using System;
 using Unigine;
 
+namespace ProjectRed.Mechanics.Move;
+
 [Serializable]
-public struct Rotation
+public struct Movement
 {
     [ShowInEditor]
     private float _speed;

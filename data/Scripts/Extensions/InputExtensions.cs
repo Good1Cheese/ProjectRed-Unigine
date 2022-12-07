@@ -1,5 +1,7 @@
 ﻿using Unigine;
 
+namespace ProjectRed.Extensions;
+
 public static class InputExtensions
 {
     public const float Positiv = 1;

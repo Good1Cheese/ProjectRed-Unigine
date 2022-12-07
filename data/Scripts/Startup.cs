@@ -1,6 +1,9 @@
 using Leopotam.EcsLite;
+using ProjectRed.Initiables;
 using System;
 using Unigine;
+
+namespace ProjectRed;
 
 [Component(PropertyGuid = "ab233cb5e516269075fc48afd84b5e42744308b9")]
 public class Startup : Component

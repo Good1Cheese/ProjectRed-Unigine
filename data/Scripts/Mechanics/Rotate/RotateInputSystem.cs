@@ -1,6 +1,8 @@
 ﻿using Leopotam.EcsLite;
 using Unigine;
 
+namespace ProjectRed.Mechanics.Rotate;
+
 public class RotateInputSystem : IEcsInitSystem, IEcsRunSystem
 {
     private EcsPool<Rotation> _movementPool;

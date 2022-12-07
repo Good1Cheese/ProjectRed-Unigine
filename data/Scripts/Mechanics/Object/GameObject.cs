@@ -1,5 +1,7 @@
 ﻿using Unigine;
 
+namespace ProjectRed.Mechanics.Object;
+
 public struct GameObject
 {
     public GameObject(Node node, PlayerDummy camera)
