@@ -2,7 +2,7 @@
 
 namespace ProjectRed.Initiables;
 
-public interface Initiable
+public interface IInitiable
 {
     void Initialize(EcsWorld world, EcsSystems systems);
 }
