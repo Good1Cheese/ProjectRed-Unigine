@@ -743,28 +743,37 @@
 		</node>
 		<node type="NodeDummy" id="2128796429" name="Game">
 			<properties>
-				<property parent="ab233cb5e516269075fc48afd84b5e42744308b9" guid="ac6c42e5a8f2970037ea9e5f05b9d832afe4d9e9"/>
-				<property parent="efaac500af98f45ff5d8363228e39fe99f75e834" guid="8435b120a3dbb1ff7969975240184e89d8568654"/>
-				<property parent="6585e2fde7614838cc9dee37d0bcf62a2a362f81" guid="20431442945b46b90b5040c41c7455535d715a96">
+				<property parent="ab233cb5e516269075fc48afd84b5e42744308b9" guid="bb0a26e3939c5ee64da5690d57f57708211b2ec7">
+					<parameter name="_systems">7e3058d194afbbfc29dde72b5a01d28e18493895</parameter>
+					<parameter name="_initiables">
+						<value index="0">a7d35ddb23f2f97e3c7bd2c539f0256082e5193f</value>
+						<value index="1">bcfb81f9bc4ec30439867293ea4456d6d766a03d</value>
+					</parameter>
+				</property>
+				<property parent="efaac500af98f45ff5d8363228e39fe99f75e834" guid="7e3058d194afbbfc29dde72b5a01d28e18493895"/>
+				<property parent="98b346d4567604230d7e1b26d15d784ddba1bd48" guid="a7d35ddb23f2f97e3c7bd2c539f0256082e5193f">
 					<parameter name="_nodeLink">guid://64edc904bbfdc093b1674cd6e8311e3d8ceeca78</parameter>
 					<parameter name="_movement">
 						<parameter name="_speed">5</parameter>
 					</parameter>
 					<parameter name="_rotation">
-						<parameter name="_speed">5</parameter>
+						<parameter name="_speed">3</parameter>
 					</parameter>
 					<parameter name="_interaction">
 						<parameter name="_mask">0x2</parameter>
-						<parameter name="_length">1</parameter>
+						<parameter name="_length">2</parameter>
 					</parameter>
 				</property>
 			</properties>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
 		</node>
-		<node type="ObjectMeshStatic" id="813242765" name="Cuboid">
+		<node type="ObjectMeshStatic" id="813242765" name="Pistol">
 			<mesh_name>guid://7f239c2f220f9bc2653b2839e007b444494a32d3</mesh_name>
 			<surface name="box" intersection_mask="0x2" physics_friction="1" physics_restitution="1" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
-			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 5.3147678 0.37699652 0.94635022 1.0</transform>
+			<properties>
+				<property parent="16556aacd211e61b81a964be26bac505dbe7f2a0" guid="bcfb81f9bc4ec30439867293ea4456d6d766a03d"/>
+			</properties>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 5.7043118 2.8703873 0.5287962 1.0</transform>
 		</node>
 	</editor>
 	<console>

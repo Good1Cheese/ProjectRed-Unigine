@@ -1,14 +1,13 @@
 using Leopotam.EcsLite;
+using ProjectRed.Entities;
 using ProjectRed.Extensions;
 using ProjectRed.Mechanics.Move;
 using ProjectRed.Mechanics.Object;
 using ProjectRed.Mechanics.Rotate;
 using Unigine;
 
-namespace ProjectRed.Initiables.Entities;
-
-[Component(PropertyGuid = "6585e2fde7614838cc9dee37d0bcf62a2a362f81")]
-public class Player : Component, Initiable
+[Component(PropertyGuid = "98b346d4567604230d7e1b26d15d784ddba1bd48")]
+public class Player : Component, IEntity
 {
     [ShowInEditor]
     private AssetLinkNode _nodeLink;
@@ -20,20 +19,18 @@ public class Player : Component, Initiable
     private Rotation _rotation;
 
     [ShowInEditor]
-    private Interaction _interaction;
+    private Intersection _interaction;
 
     private GameObject _gameObject;
 
-
-    public void Initialize(EcsWorld world, EcsSystems systems)
+    public void Create(EcsWorld world)
     {
         Node body = _nodeLink.Load(vec3.UP);
         Node head = body.GetChild(0);
 
         int entity = world.NewEntity();
 
-        _gameObject = new(body, head);
-        _interaction.Intersection = new();
+        _gameObject = new(body, head, null);
 
         world.Add(entity, _gameObject);
         world.Add(entity, _interaction);

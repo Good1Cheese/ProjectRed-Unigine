@@ -1,5 +1,5 @@
 using Leopotam.EcsLite;
-using ProjectRed.Initiables;
+using ProjectRed.Entities;
 using System;
 using Unigine;
 
@@ -8,40 +8,37 @@ namespace ProjectRed;
 [Component(PropertyGuid = "ab233cb5e516269075fc48afd84b5e42744308b9")]
 public class Startup : Component
 {
-    private EcsWorld _world;
-    private EcsSystems _systems;
+    [ShowInEditor]
+    private Systems _systems;
 
-    public Action<EcsWorld, EcsSystems> Initialized { get; set; }
+    [ShowInEditor]
+    private Component[] _initiables;
+
+    private EcsWorld _world;
+
+    public Action<EcsWorld> Inited { get; set; }
 
     private void Init()
     {
         _world = new();
-        _systems = new(_world);
+        _systems.Initialize(_world);
 
-        SubscribeInitiables();
-        Initialized?.Invoke(_world, _systems);
-
-        _systems.Init();
+        InvokeEvent();  
     }
 
-    private void SubscribeInitiables()
+    private void InvokeEvent()
     {
-        var initiables = node.GetComponents<Initiable>();
-
-        foreach (var initiable in initiables)
+        foreach (var initiable in _initiables)
         {
-            Initialized += initiable.Initialize;
+            var init = (IEntity)initiable;
+            Inited += init.Create;
         }
-    }
 
-    private void Update()
-    {
-        _systems.Run();
+        Inited?.Invoke(_world);
     }
 
     private void Shutdown()
     {
         _world.Destroy();
-        _systems.Destroy();
     }
 }

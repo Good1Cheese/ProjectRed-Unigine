@@ -3,6 +3,7 @@
 // Copyright (c) 2012-2022 Leopotam <leopotam@yandex.ru>
 // ----------------------------------------------------------------------------
 
+using System;
 using System.Collections.Generic;
 
 #if ENABLE_IL2CPP
@@ -184,6 +185,11 @@ namespace Leopotam.EcsLite {
                 }
             }
             return null;
+        }
+
+        internal void Add(EcsWorld world, EcsSystems systems)
+        {
+            throw new NotImplementedException();
         }
 #endif
     }

@@ -1,8 +1,10 @@
 using System;
 using Unigine;
 
+namespace ProjectRed.Mechanics.Object;
+
 [Serializable]
-public struct Interaction
+public struct Intersection
 {
     [ShowInEditor]
     [ParameterMask]
@@ -10,8 +12,6 @@ public struct Interaction
 
     [ShowInEditor]
     private float _length;
-
-    public WorldIntersection Intersection { get; set; }
 
     public int Mask => _mask;
     public float Length => _length;
