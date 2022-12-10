@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <nodes version="2.16.0.2">
-	<node type="ObjectMeshStatic" id="1226416089" name="Player">
+	<node type="ObjectMeshStatic" id="924440859" name="Player">
 		<mesh_name>guid://40f273236109be269d66bf4dd9645848e0bc1f07</mesh_name>
 		<surface name="capsule" physics_friction="1" physics_restitution="1" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
-		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
-		<node type="NodeDummy" id="165345934" name="Head">
+		<properties>
+			<property parent="98b346d4567604230d7e1b26d15d784ddba1bd48" guid="26672600fecfe15f03103f32095214e974afd934">
+				<parameter name="_movement">
+					<parameter name="_speed">5</parameter>
+				</parameter>
+				<parameter name="_rotation">
+					<parameter name="_speed">5</parameter>
+				</parameter>
+				<parameter name="_interaction">
+					<parameter name="_mask">0x2</parameter>
+					<parameter name="_length">2</parameter>
+				</parameter>
+				<parameter name="_gameObject">
+					<parameter name="_body">924440859</parameter>
+					<parameter name="_head">148203593</parameter>
+					<parameter name="_weaponSlot">14415472</parameter>
+				</parameter>
+			</property>
+		</properties>
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -2.2209752 -3.3762095 0.63033491 1.0</transform>
+		<node type="NodeDummy" id="148203593" name="Head">
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0.75 1.0</transform>
-			<node type="PlayerDummy" id="1151985569" name="PlayerDummy">
+			<node type="PlayerDummy" id="1705786681" name="Camera">
 				<znear>0.300000012</znear>
 				<zfar>100000</zfar>
 				<oblique_frustum_plane>0 0 -1 0</oblique_frustum_plane>
@@ -15,6 +34,9 @@
 				<is_listener>1</is_listener>
 				<controlled>1</controlled>
 				<transform>1 0 0 0.0 0 5.9604641e-08 0.99999988 0.0 0 -0.99999988 5.9604641e-08 0.0 0 0 0 1.0</transform>
+			</node>
+			<node type="NodeDummy" id="14415472" name="WeaponSlot">
+				<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
 			</node>
 		</node>
 	</node>

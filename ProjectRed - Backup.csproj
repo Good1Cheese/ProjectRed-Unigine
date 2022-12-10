@@ -71,7 +71,6 @@
 		<Compile Include="data/Scripts/Mechanics/Weapon/WeaponArmSystem.cs"/>
 		<Compile Include="data/Scripts/Mechanics/Pickup/OneFramePickupMarker.cs"/>
 		<Compile Include="data/Scripts/Extensions/OneFrameDeleteSystem.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Object/GameObjectContainer.cs"/>
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Include="source\AppEditorLogic.cs"/>

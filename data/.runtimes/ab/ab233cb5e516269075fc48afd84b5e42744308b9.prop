@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <property version="2.16.0.2" name="Startup" guid="ab233cb5e516269075fc48afd84b5e42744308b9" parent="657ecdbbfc83135a26777f86012da3587b67be0c" editable="0">
-	<struct name="Systems"/>
-	<parameter name="_systems" type="property" filter="efaac500af98f45ff5d8363228e39fe99f75e834" flags="internal"/>
-	<parameter name="_initiables" type="array" array_type="property" filter="657ecdbbfc83135a26777f86012da3587b67be0c" flags="internal"/>
+	<parameter name="_entities" type="array" array_type="property" filter="657ecdbbfc83135a26777f86012da3587b67be0c" flags="internal"/>
+	<parameter name="_player" type="file" filter=".node"/>
 </property>

@@ -10,9 +10,6 @@ using Unigine;
 public class Player : Component, IEntity
 {
     [ShowInEditor]
-    private AssetLinkNode _nodeLink;
-
-    [ShowInEditor]
     private Movement _movement;
 
     [ShowInEditor]
@@ -21,16 +18,12 @@ public class Player : Component, IEntity
     [ShowInEditor]
     private Intersection _interaction;
 
+    [ShowInEditor]
     private GameObject _gameObject;
 
     public void Create(EcsWorld world)
     {
-        Node body = _nodeLink.Load(vec3.UP);
-        Node head = body.GetChild(0);
-
         int entity = world.NewEntity();
-
-        _gameObject = new(body, head, null);
 
         world.Add(entity, _gameObject);
         world.Add(entity, _interaction);

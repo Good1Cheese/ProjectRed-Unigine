@@ -9,10 +9,10 @@ namespace ProjectRed;
 public class Startup : Component
 {
     [ShowInEditor]
-    private Systems _systems;
+    private Component[] _entities;
 
     [ShowInEditor]
-    private Component[] _initiables;
+    private AssetLinkNode _player;
 
     private EcsWorld _world;
 
@@ -21,17 +21,21 @@ public class Startup : Component
     private void Init()
     {
         _world = new();
-        _systems.Initialize(_world);
+
+        var systems = node.GetComponent<Systems>();
+        systems.Initialize(_world);
+
+        var player = _player.Load(vec3.UP);
+        Inited += player.GetComponent<IEntity>().Create;
 
         InvokeEvent();  
     }
 
     private void InvokeEvent()
     {
-        foreach (var initiable in _initiables)
+        foreach (var entity in _entities)
         {
-            var init = (IEntity)initiable;
-            Inited += init.Create;
+            Inited += (entity as IEntity).Create;
         }
 
         Inited?.Invoke(_world);

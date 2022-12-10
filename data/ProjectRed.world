@@ -744,26 +744,12 @@
 		<node type="NodeDummy" id="2128796429" name="Game">
 			<properties>
 				<property parent="ab233cb5e516269075fc48afd84b5e42744308b9" guid="bb0a26e3939c5ee64da5690d57f57708211b2ec7">
-					<parameter name="_systems">7e3058d194afbbfc29dde72b5a01d28e18493895</parameter>
-					<parameter name="_initiables">
-						<value index="0">a7d35ddb23f2f97e3c7bd2c539f0256082e5193f</value>
-						<value index="1">bcfb81f9bc4ec30439867293ea4456d6d766a03d</value>
+					<parameter name="_entities">
+						<value index="0">bcfb81f9bc4ec30439867293ea4456d6d766a03d</value>
 					</parameter>
+					<parameter name="_player">guid://9d42499ed28fa46537178a80f04ffbdfe7a097b2</parameter>
 				</property>
 				<property parent="efaac500af98f45ff5d8363228e39fe99f75e834" guid="7e3058d194afbbfc29dde72b5a01d28e18493895"/>
-				<property parent="98b346d4567604230d7e1b26d15d784ddba1bd48" guid="a7d35ddb23f2f97e3c7bd2c539f0256082e5193f">
-					<parameter name="_nodeLink">guid://64edc904bbfdc093b1674cd6e8311e3d8ceeca78</parameter>
-					<parameter name="_movement">
-						<parameter name="_speed">5</parameter>
-					</parameter>
-					<parameter name="_rotation">
-						<parameter name="_speed">3</parameter>
-					</parameter>
-					<parameter name="_interaction">
-						<parameter name="_mask">0x2</parameter>
-						<parameter name="_length">2</parameter>
-					</parameter>
-				</property>
 			</properties>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
 		</node>

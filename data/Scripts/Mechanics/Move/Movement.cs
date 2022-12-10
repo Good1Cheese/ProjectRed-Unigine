@@ -9,7 +9,6 @@ public struct Movement
     [ShowInEditor]
     private float _speed;
 
-    public vec2 Input { get; set; }
-
     public float Speed => _speed;
+    public vec2 Input { get; set; }
 }

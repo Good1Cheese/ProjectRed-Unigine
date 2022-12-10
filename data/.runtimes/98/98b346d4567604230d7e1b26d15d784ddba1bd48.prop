@@ -10,8 +10,13 @@
 		<parameter name="_mask" type="mask">0</parameter>
 		<parameter name="_length" type="float">0</parameter>
 	</struct>
-	<parameter name="_nodeLink" type="file" filter=".node"/>
+	<struct name="GameObject">
+		<parameter name="_body" type="node"/>
+		<parameter name="_head" type="node"/>
+		<parameter name="_weaponSlot" type="node"/>
+	</struct>
 	<parameter name="_movement" type="Movement"/>
 	<parameter name="_rotation" type="Rotation"/>
 	<parameter name="_interaction" type="Intersection"/>
+	<parameter name="_gameObject" type="GameObject"/>
 </property>

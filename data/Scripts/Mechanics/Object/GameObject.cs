@@ -1,17 +1,21 @@
-﻿using Unigine;
+﻿using System;
+using Unigine;
 
 namespace ProjectRed.Mechanics.Object;
 
+[Serializable]
 public struct GameObject
 {
-    public GameObject(Node body, Node head, Node weaponSlot)
-    {
-        Body = body;
-        Head = head;
-        WeaponSlot = weaponSlot;
-    }
+    [ShowInEditor] 
+    private Node _body;
 
-    public Node Body { get; }
-    public Node Head { get; }
-    public Node WeaponSlot { get; }
+    [ShowInEditor] 
+    private Node _head;
+
+    [ShowInEditor] 
+    private Node _weaponSlot;
+
+    public Node Body => _body;
+    public Node Head => _head;
+    public Node WeaponSlot => _weaponSlot;
 }

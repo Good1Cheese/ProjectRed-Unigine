@@ -1,5 +1,4 @@
 using Leopotam.EcsLite;
-using ProjectRed.Entities;
 using ProjectRed.Extensions;
 using Unigine;
 
@@ -16,6 +15,8 @@ public class Fireable : Component, IEntity
     public void Create(EcsWorld world)
     {
         int entity = world.NewEntity();
+
+        _weapon.Node = node;
 
         world.Add(entity, _weapon);
 
