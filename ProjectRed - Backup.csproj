@@ -67,7 +67,11 @@
 		<Compile Include="data/Scripts/Mechanics/Pickup/PickupSystem.cs"/>
 		<Compile Include="data/Scripts/Mechanics/Pickup/PickupMarker.cs"/>
 		<Compile Include="data/Scripts/Mechanics/Object/Intersection.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Fireable/Weapon.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Weapon/Weapon.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Weapon/WeaponArmSystem.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Pickup/OneFramePickupMarker.cs"/>
+		<Compile Include="data/Scripts/Extensions/OneFrameDeleteSystem.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Object/GameObjectContainer.cs"/>
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Include="source\AppEditorLogic.cs"/>

@@ -11,6 +11,7 @@ public class PickupSystem : IEcsInitSystem, IEcsRunSystem
     private EcsPool<GameObject> _gameObjectPool;
     private EcsPool<Intersection> _intersectionPool;
     private EcsPool<PickupMarker> _pickupMarkerPool;
+    private EcsPool<OneFramePickupMarker> _oneFramePickupMarkerPool;
 
     public void Init(IEcsSystems systems)
     {
@@ -19,15 +20,16 @@ public class PickupSystem : IEcsInitSystem, IEcsRunSystem
         _gameObjectPool = world.GetPool<GameObject>();
         _intersectionPool = world.GetPool<Intersection>();
         _pickupMarkerPool = world.GetPool<PickupMarker>();
+        _oneFramePickupMarkerPool = world.GetPool<OneFramePickupMarker>();
     }
 
     public void Run(IEcsSystems systems)
     {
         var world = systems.GetWorld();
 
-        EcsFilter markerFilter = world.Filter<PickupMarker>().End();
+        EcsFilter pickupFilter = world.Filter<PickupMarker>().End();
 
-        if (markerFilter.GetEntitiesCount() > 0) return;
+        if (pickupFilter.GetEntitiesCount() > 0) return;
 
         EcsFilter filter = world.Filter<GameObject>().Inc<Intersection>().End();
 
@@ -48,7 +50,10 @@ public class PickupSystem : IEcsInitSystem, IEcsRunSystem
 
             if (fireable.PackedEntity.Unpack(world, out int unpacked))
             {
-                _pickupMarkerPool.Add(unpacked);
+                _oneFramePickupMarkerPool.Add(unpacked);
+
+                ref var pickupMarker = ref _pickupMarkerPool.Add(unpacked);
+                pickupMarker.Slot = gameObject.WeaponSlot;
             }
         }
     }

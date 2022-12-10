@@ -3,6 +3,7 @@ using ProjectRed.Mechanics.Move;
 using ProjectRed.Mechanics.Rotate;
 using Unigine;
 using ProjectRed.Mechanics.Pickup;
+using ProjectRed.Extensions;
 
 namespace ProjectRed;
 
@@ -17,8 +18,10 @@ public class Systems : Component
 
         _systems.Add(new MoveInputSystem());
         _systems.Add(new RotateInputSystem());
+        _systems.Add(new OneFrameDeleteSystem<OneFramePickupMarker>());
         _systems.Add(new PickupSystem());
 
+        _systems.Add(new WeaponArmSystem());
         _systems.Add(new MoveSystem());
         _systems.Add(new RotateSystem());
 
