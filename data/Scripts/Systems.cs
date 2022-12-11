@@ -23,6 +23,7 @@ public class Systems : Component
         _systems.Add(new PickupSystem());
 
         _systems.Add(new WeaponArmSystem());
+        _systems.Add(new WeaponThrowSystem());
         _systems.Add(new MoveSystem());
         _systems.Add(new RotateSystem());
 

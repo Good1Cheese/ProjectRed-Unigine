@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.16.0.2">
+	<node type="NodeDummy" id="560038661" name="Pistol">
+		<transform>5 0 0 0.0 0 5 0 0.0 0 0 5 0.0 0 0 0 1.0</transform>
+		<node type="ObjectMeshStatic" id="337084877" name="Cube 1">
+			<mesh_name>guid://d8339adae60aac7102b7bb1cda0c9bcb8bf8beae</mesh_name>
+			<surface name="box" intersection_mask="0x2" physics_friction="1" physics_restitution="1" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
+			<transform>0.099999979 -8.742262e-09 -7.6427275e-16 0.0 2.4243025e-09 0.027730834 2.4243059e-09 0.0 3.8435948e-23 -2.6446643e-09 0.03025144 0.0 0.034821786 -6.4913621e-09 0.039430805 1.0</transform>
+		</node>
+		<node type="ObjectMeshStatic" id="1278578268" name="Cube 1_1">
+			<mesh_name>guid://d8339adae60aac7102b7bb1cda0c9bcb8bf8beae</mesh_name>
+			<surface name="box" intersection_mask="0x2" physics_friction="1" physics_restitution="1" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
+			<transform>2.4420024e-05 -5.5769679e-14 0.049999993 0.0 1.5032806e-21 0.027730633 3.093057e-14 0.0 -0.030251339 -1.6476364e-17 1.4774771e-05 0.0 0 0 0 1.0</transform>
+		</node>
+	</node>
+</nodes>

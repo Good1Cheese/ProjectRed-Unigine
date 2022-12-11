@@ -745,7 +745,7 @@
 			<properties>
 				<property parent="ab233cb5e516269075fc48afd84b5e42744308b9" guid="bb0a26e3939c5ee64da5690d57f57708211b2ec7">
 					<parameter name="_entities">
-						<value index="0">bcfb81f9bc4ec30439867293ea4456d6d766a03d</value>
+						<value index="0">eada5abe063b4305b5a258a0cc9d337f4a562ad2</value>
 					</parameter>
 					<parameter name="_player">guid://9d42499ed28fa46537178a80f04ffbdfe7a097b2</parameter>
 				</property>
@@ -753,13 +753,12 @@
 			</properties>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
 		</node>
-		<node type="ObjectMeshStatic" id="813242765" name="Pistol">
-			<mesh_name>guid://7f239c2f220f9bc2653b2839e007b444494a32d3</mesh_name>
-			<surface name="box" intersection_mask="0x2" physics_friction="1" physics_restitution="1" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
+		<node type="NodeReference" id="476095366" name="Pistol">
+			<reference>guid://692772e28347d4d94f143864d0b1a87311cd5336</reference>
 			<properties>
-				<property parent="16556aacd211e61b81a964be26bac505dbe7f2a0" guid="bcfb81f9bc4ec30439867293ea4456d6d766a03d"/>
+				<property parent="16556aacd211e61b81a964be26bac505dbe7f2a0" guid="eada5abe063b4305b5a258a0cc9d337f4a562ad2"/>
 			</properties>
-			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 5.7043118 2.8703873 0.5287962 1.0</transform>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -0.86813998 1.7378268 1.3912342 1.0</transform>
 		</node>
 	</editor>
 	<console>
