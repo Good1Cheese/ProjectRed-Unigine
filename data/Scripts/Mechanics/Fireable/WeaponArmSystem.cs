@@ -1,5 +1,8 @@
 ﻿using Leopotam.EcsLite;
 using ProjectRed.Mechanics.Pickup;
+using Unigine;
+
+namespace ProjectRed.Mechanics.Fireable;
 
 public class WeaponArmSystem : IEcsInitSystem, IEcsRunSystem
 {
@@ -25,7 +28,9 @@ public class WeaponArmSystem : IEcsInitSystem, IEcsRunSystem
             ref var weapon = ref _weaponPool.Get(entity);
             ref var pickupMarker = ref _pickupMarkerPool.Get(entity);
 
-            weapon.Node.SetWorldParent(pickupMarker.Slot);
+            weapon.Node.SetWorldParent(pickupMarker.WeaponParent);
+            weapon.Node.Position = vec3.ZERO;
+            weapon.Node.SetRotation(quat.IDENTITY);
         }
     }
 }

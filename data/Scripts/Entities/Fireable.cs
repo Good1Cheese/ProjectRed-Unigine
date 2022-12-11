@@ -1,5 +1,6 @@
 using Leopotam.EcsLite;
 using ProjectRed.Extensions;
+using ProjectRed.Mechanics.Fireable;
 using Unigine;
 
 namespace ProjectRed.Entities;
