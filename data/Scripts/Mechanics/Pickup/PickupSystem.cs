@@ -8,6 +8,8 @@ namespace ProjectRed.Mechanics.Pickup;
 
 public class PickupSystem : IEcsInitSystem, IEcsRunSystem
 {
+    public const Input.KEY PickupKey = Input.KEY.E;
+
     private EcsPool<GameObject> _gameObjectPool;
     private EcsPool<Intersection> _intersectionPool;
     private EcsPool<PickupMarker> _pickupMarkerPool;
@@ -29,7 +31,7 @@ public class PickupSystem : IEcsInitSystem, IEcsRunSystem
 
         EcsFilter pickupFilter = world.Filter<PickupMarker>().End();
 
-        if (pickupFilter.GetEntitiesCount() > 0) return;
+        if (pickupFilter.GetEntitiesCount() > 0 || !Input.IsKeyPressed(PickupKey)) return;
 
         EcsFilter filter = world.Filter<GameObject>().Inc<Intersection>().End();
 
@@ -46,7 +48,11 @@ public class PickupSystem : IEcsInitSystem, IEcsRunSystem
 
             if (obj == null) continue;
 
-            var fireable = obj.GetComponent<Fireable>();
+            var parent = obj.Parent.Parent;
+
+            var fireable = parent.GetComponent<Fireable>();
+
+            if (fireable == null) continue;
 
             if (fireable.PackedEntity.Unpack(world, out int unpacked))
             {
