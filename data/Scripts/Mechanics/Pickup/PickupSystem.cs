@@ -59,7 +59,7 @@ public class PickupSystem : IEcsInitSystem, IEcsRunSystem
                 _oneFramePickupMarkerPool.Add(unpacked);
 
                 ref var pickupMarker = ref _pickupMarkerPool.Add(unpacked);
-                pickupMarker.Slot = gameObject.WeaponSlot;
+                pickupMarker.WeaponParent = gameObject.WeaponSlot;
             }
         }
     }
