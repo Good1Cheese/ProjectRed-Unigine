@@ -50,7 +50,7 @@ public class PickupSystem : IEcsInitSystem, IEcsRunSystem
 
             var parent = obj.Parent.Parent;
 
-            var fireable = parent.GetComponent<Fireable>();
+            var fireable = parent.GetComponent<WeaponEntity>();
 
             if (fireable == null) continue;
 

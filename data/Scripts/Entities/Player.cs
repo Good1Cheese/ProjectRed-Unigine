@@ -7,7 +7,7 @@ using ProjectRed.Mechanics.Rotate;
 using Unigine;
 
 [Component(PropertyGuid = "98b346d4567604230d7e1b26d15d784ddba1bd48")]
-public class Player : Component, IEntity
+public class PlayerEntity : Component, IEntity
 {
     [ShowInEditor]
     private Movement _movement;

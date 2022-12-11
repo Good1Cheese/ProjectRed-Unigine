@@ -4,6 +4,7 @@ using ProjectRed.Mechanics.Rotate;
 using Unigine;
 using ProjectRed.Mechanics.Pickup;
 using ProjectRed.Extensions;
+using ProjectRed.Mechanics.Fireable;
 
 namespace ProjectRed;
 

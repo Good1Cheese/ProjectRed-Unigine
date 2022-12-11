@@ -6,7 +6,7 @@ using Unigine;
 namespace ProjectRed.Entities;
 
 [Component(PropertyGuid = "16556aacd211e61b81a964be26bac505dbe7f2a0")]
-public class Fireable : Component, IEntity
+public class WeaponEntity : Component, IEntity
 {
     [ShowInEditor]
     private Weapon _weapon;
