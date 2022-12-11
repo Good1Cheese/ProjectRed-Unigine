@@ -1,6 +1,6 @@
 ﻿using Unigine;
 
-namespace ProjectRed.Mechanics.Fireable;
+namespace ProjectRed.Mechanics.Weapon;
 
 public struct Weapon
 {

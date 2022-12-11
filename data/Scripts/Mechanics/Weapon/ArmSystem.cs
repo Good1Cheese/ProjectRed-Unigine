@@ -1,10 +1,10 @@
 ﻿using Leopotam.EcsLite;
-using ProjectRed.Mechanics.Pickup;
+using ProjectRed.Mechanics.Weapon.Pickup;
 using Unigine;
 
-namespace ProjectRed.Mechanics.Fireable;
+namespace ProjectRed.Mechanics.Weapon;
 
-public class WeaponArmSystem : IEcsInitSystem, IEcsRunSystem
+public class ArmSystem : IEcsInitSystem, IEcsRunSystem
 {
     private EcsPool<Weapon> _weaponPool;
     private EcsPool<PickupMarker> _pickupMarkerPool;

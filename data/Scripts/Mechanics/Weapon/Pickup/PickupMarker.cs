@@ -1,6 +1,6 @@
 ﻿using Unigine;
 
-namespace ProjectRed.Mechanics.Pickup;
+namespace ProjectRed.Mechanics.Weapon.Pickup;
 
 public struct PickupMarker
 {

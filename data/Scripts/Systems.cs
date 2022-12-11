@@ -2,9 +2,10 @@ using Leopotam.EcsLite;
 using ProjectRed.Mechanics.Move;
 using ProjectRed.Mechanics.Rotate;
 using Unigine;
-using ProjectRed.Mechanics.Pickup;
 using ProjectRed.Extensions;
-using ProjectRed.Mechanics.Fireable;
+using ProjectRed.Mechanics.Weapon;
+using ProjectRed.Mechanics.Weapon.Pickup;
+using ProjectRed.Mechanics.Weapon.Intersection;
 
 namespace ProjectRed;
 
@@ -20,10 +21,12 @@ public class Systems : Component
         _systems.Add(new MoveInputSystem());
         _systems.Add(new RotateInputSystem());
         _systems.Add(new OneFrameDeleteSystem<OneFramePickupMarker>());
+        _systems.Add(new OneFrameDeleteSystem<IntersectionMarker>());
+        _systems.Add(new IntersectionSystem());
         _systems.Add(new PickupSystem());
 
-        _systems.Add(new WeaponArmSystem());
-        _systems.Add(new WeaponThrowSystem());
+        _systems.Add(new ArmSystem());
+        _systems.Add(new ThrowSystem());
         _systems.Add(new MoveSystem());
         _systems.Add(new RotateSystem());
 

@@ -1,10 +1,10 @@
 using System;
 using Unigine;
 
-namespace ProjectRed.Mechanics.Object;
+namespace ProjectRed.Mechanics.Weapon.Intersection;
 
 [Serializable]
-public struct Intersection
+public struct IntersectionComponent
 {
     [ShowInEditor]
     [ParameterMask]

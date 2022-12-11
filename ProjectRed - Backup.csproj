@@ -63,15 +63,17 @@
 		<Compile Include="data/Scripts/Systems.cs"/>
 		<Compile Include="data/Scripts/Entities/IEntity.cs"/>
 		<Compile Include="data/Scripts/Entities/Player.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Pickup/PickupSystem.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Object/Intersection.cs"/>
 		<Compile Include="data/Scripts/Extensions/OneFrameDeleteSystem.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Pickup/OneFramePickupMarker.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Pickup/PickupMarker.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Fireable/Weapon.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Fireable/WeaponArmSystem.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Fireable/WeaponThrowSystem.cs"/>
 		<Compile Include="data/Scripts/Entities/WeaponEntity.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Weapon/Pickup/PickupMarker.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Weapon/Pickup/PickupSystem.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Weapon/ArmSystem.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Weapon/ThrowSystem.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Weapon/Weapon.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Weapon/Pickup/OneFramePickupMarker.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Weapon/Intersection/Intersection.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Weapon/Intersection/IntersectionSystem.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Weapon/Intersection/IntersectionMarker.cs"/>
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Include="source\AppEditorLogic.cs"/>

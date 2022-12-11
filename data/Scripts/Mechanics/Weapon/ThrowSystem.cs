@@ -1,10 +1,10 @@
 ﻿using Leopotam.EcsLite;
-using ProjectRed.Mechanics.Pickup;
+using ProjectRed.Mechanics.Weapon.Pickup;
 using Unigine;
 
-namespace ProjectRed.Mechanics.Fireable;
+namespace ProjectRed.Mechanics.Weapon;
 
-public class WeaponThrowSystem : IEcsInitSystem, IEcsRunSystem
+public class ThrowSystem : IEcsInitSystem, IEcsRunSystem
 {
     public const Input.KEY ThrowKey = Input.KEY.G;
 

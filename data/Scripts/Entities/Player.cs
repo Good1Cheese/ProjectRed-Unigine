@@ -4,6 +4,7 @@ using ProjectRed.Extensions;
 using ProjectRed.Mechanics.Move;
 using ProjectRed.Mechanics.Object;
 using ProjectRed.Mechanics.Rotate;
+using ProjectRed.Mechanics.Weapon.Intersection;
 using Unigine;
 
 [Component(PropertyGuid = "98b346d4567604230d7e1b26d15d784ddba1bd48")]
@@ -16,7 +17,7 @@ public class PlayerEntity : Component, IEntity
     private Rotation _rotation;
 
     [ShowInEditor]
-    private Intersection _interaction;
+    private IntersectionComponent _interaction;
 
     [ShowInEditor]
     private GameObject _gameObject;
