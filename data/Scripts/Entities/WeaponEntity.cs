@@ -18,6 +18,7 @@ public class WeaponEntity : Component, IEntity
         int entity = world.NewEntity();
 
         _weapon.Node = node;
+        _weapon.Base = node.GetChild(0);
 
         world.Add(entity, _weapon);
 

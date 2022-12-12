@@ -13,6 +13,10 @@ public struct IntersectionComponent
     [ShowInEditor]
     private float _length;
 
+    [ShowInEditor]
+    private PhysicsIntersection _physicalIntersection;
+
     public int Mask => _mask;
     public float Length => _length;
+    public PhysicsIntersection PhysicalIntersection => _physicalIntersection;
 }

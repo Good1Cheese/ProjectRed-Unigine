@@ -1,6 +1,8 @@
-﻿namespace ProjectRed.Mechanics.Weapon.Intersection;
+﻿using Unigine;
+
+namespace ProjectRed.Mechanics.Weapon.Intersection;
 
 public struct IntersectionMarker
 {
-    public Unigine.Object Result { get; internal set; }
+    public Node Result { get; set; }
 }

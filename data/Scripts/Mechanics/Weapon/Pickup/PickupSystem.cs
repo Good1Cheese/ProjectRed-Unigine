@@ -34,18 +34,17 @@ public class PickupSystem : IEcsInitSystem, IEcsRunSystem
             ref var gameObject = ref _gameObjectPool.Get(entity);
             ref var intersection = ref _intersectionMarkerPool.Get(entity);
 
-            var parent = intersection.Result.Parent.Parent;
+            var weaponNode = intersection.Result.GetComponentInParent<WeaponEntity>();
 
-            var weapon = parent.GetComponent<WeaponEntity>();
+            if (weaponNode == null) continue;
 
-            if (weapon == null) continue;
-
-            if (weapon.PackedEntity.Unpack(world, out int unpacked))
+            if (weaponNode.PackedEntity.Unpack(world, out int unpacked))
             {
                 _oneFramePickupMarkerPool.Add(unpacked);
 
                 ref var pickupMarker = ref _pickupMarkerPool.Add(unpacked);
                 pickupMarker.WeaponParent = gameObject.WeaponSlot;
+                pickupMarker.Head = gameObject.Head;
             }
         }
     }

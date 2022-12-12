@@ -745,7 +745,7 @@
 			<properties>
 				<property parent="ab233cb5e516269075fc48afd84b5e42744308b9" guid="bb0a26e3939c5ee64da5690d57f57708211b2ec7">
 					<parameter name="_entities">
-						<value index="0">eada5abe063b4305b5a258a0cc9d337f4a562ad2</value>
+						<value index="0">750e8ea7e951bbdafeb859715b77841c66dfd0cb</value>
 					</parameter>
 					<parameter name="_player">guid://9d42499ed28fa46537178a80f04ffbdfe7a097b2</parameter>
 				</property>
@@ -753,12 +753,12 @@
 			</properties>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
 		</node>
-		<node type="NodeReference" id="476095366" name="Pistol">
-			<reference>guid://692772e28347d4d94f143864d0b1a87311cd5336</reference>
+		<node type="NodeReference" id="543742159" name="Pistol">
+			<reference>guid://3bc97773357cd6369c65581d2984fad8d339c057</reference>
 			<properties>
-				<property parent="16556aacd211e61b81a964be26bac505dbe7f2a0" guid="eada5abe063b4305b5a258a0cc9d337f4a562ad2"/>
+				<property parent="16556aacd211e61b81a964be26bac505dbe7f2a0" guid="750e8ea7e951bbdafeb859715b77841c66dfd0cb"/>
 			</properties>
-			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -0.86813998 1.7378268 1.3912342 1.0</transform>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -0.93189192 1.9336435 1.0173031 1.0</transform>
 		</node>
 	</editor>
 	<console>

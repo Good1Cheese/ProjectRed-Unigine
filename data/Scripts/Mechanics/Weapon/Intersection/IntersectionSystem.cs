@@ -41,7 +41,7 @@ public class IntersectionSystem : IEcsInitSystem, IEcsRunSystem
             vec3 p0 = gameObject.Head.WorldPosition;
             vec3 p1 = p0 + forward * intersection.Length;
 
-            var result = World.GetIntersection(p0, p1, intersection.Mask);
+            var result = Physics.GetIntersection(p0, p1, intersection.Mask, intersection.PhysicalIntersection);
 
             if (result == null) continue;
 

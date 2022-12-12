@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <nodes version="2.16.0.2">
-	<node type="ObjectMeshStatic" id="221019696" name="Player">
+	<node type="ObjectMeshStatic" id="1251336861" name="Player">
 		<mesh_name>guid://40f273236109be269d66bf4dd9645848e0bc1f07</mesh_name>
 		<surface name="capsule" physics_friction="1" physics_restitution="1" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
 		<properties>
-			<property parent="98b346d4567604230d7e1b26d15d784ddba1bd48" guid="1d5666d731cad64a82575121916a380c6a5493fb">
+			<property parent="98b346d4567604230d7e1b26d15d784ddba1bd48" guid="00e3224a20db2d21a3c4640c9270cffbee8a851e">
 				<parameter name="_movement">
 					<parameter name="_speed">5</parameter>
 				</parameter>
@@ -12,20 +12,20 @@
 					<parameter name="_speed">5</parameter>
 				</parameter>
 				<parameter name="_interaction">
-					<parameter name="_mask">0x2</parameter>
-					<parameter name="_length">2</parameter>
+					<parameter name="_mask">0x1</parameter>
+					<parameter name="_length">3</parameter>
 				</parameter>
 				<parameter name="_gameObject">
-					<parameter name="_body">221019696</parameter>
-					<parameter name="_head">1953875712</parameter>
-					<parameter name="_weaponSlot">1029437835</parameter>
+					<parameter name="_body">1251336861</parameter>
+					<parameter name="_head">1601052209</parameter>
+					<parameter name="_weaponSlot">920177899</parameter>
 				</parameter>
 			</property>
 		</properties>
-		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -1.4200785 5.3761673 -2.3841858e-07 1.0</transform>
-		<node type="NodeDummy" id="1953875712" name="Head">
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0.53227711 2.0811322 1.1920929e-07 1.0</transform>
+		<node type="NodeDummy" id="1601052209" name="Head">
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0.75 1.0</transform>
-			<node type="PlayerDummy" id="46102162" name="Camera">
+			<node type="PlayerDummy" id="1741174695" name="Camera">
 				<znear>0.300000012</znear>
 				<zfar>100000</zfar>
 				<oblique_frustum_plane>0 0 -1 0</oblique_frustum_plane>
@@ -35,7 +35,7 @@
 				<controlled>1</controlled>
 				<transform>1 0 0 0.0 0 5.9604641e-08 0.99999988 0.0 0 -0.99999988 5.9604641e-08 0.0 0 0 0 1.0</transform>
 			</node>
-			<node type="NodeDummy" id="1029437835" name="WeaponSlot">
+			<node type="NodeDummy" id="920177899" name="WeaponSlot">
 				<transform>5.9604627e-08 0.99999964 0 0.0 -0.99999768 5.960451e-08 0 0.0 0 0 0.99999833 0.0 0 1.0773015 -0.32800007 1.0</transform>
 			</node>
 		</node>

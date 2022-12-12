@@ -28,9 +28,18 @@ public class ArmSystem : IEcsInitSystem, IEcsRunSystem
             ref var weapon = ref _weaponPool.Get(entity);
             ref var pickupMarker = ref _pickupMarkerPool.Get(entity);
 
+            BodyRigid rigid = weapon.Base.ObjectBodyRigid;
+            rigid.Gravity = false;
+
             weapon.Node.SetWorldParent(pickupMarker.WeaponParent);
-            weapon.Node.Position = vec3.ZERO;
-            weapon.Node.SetRotation(quat.IDENTITY);
+            ResetNode(weapon.Node);
+            ResetNode(weapon.Base);
         }
+    }
+
+    private static void ResetNode(Node node)
+    {
+        node.Position = vec3.ZERO;
+        node.SetRotation(quat.IDENTITY);
     }
 }
