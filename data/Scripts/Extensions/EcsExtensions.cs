@@ -1,4 +1,5 @@
 ﻿using Leopotam.EcsLite;
+using System.Threading.Tasks;
 
 namespace ProjectRed.Extensions;
 
@@ -19,5 +20,12 @@ public static class EcsExtensions
         ref var component = ref pool.Get(entity);
 
         component = existing;
+    }
+
+    public async static Task Del<T>(this EcsPool<T> pool, int entity, float delayInMilliseconds) where T : struct
+    {
+        await Task.Delay((int)delayInMilliseconds);
+
+        pool.Del(entity);
     }
 }

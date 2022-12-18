@@ -757,7 +757,9 @@
 			<reference>guid://3bc97773357cd6369c65581d2984fad8d339c057</reference>
 			<properties>
 				<property parent="16556aacd211e61b81a964be26bac505dbe7f2a0" guid="750e8ea7e951bbdafeb859715b77841c66dfd0cb">
-					<parameter name="_weapon"/>
+					<parameter name="_weapon">
+						<parameter name="_delayAfterShotInMilliseconds">1500</parameter>
+					</parameter>
 				</property>
 			</properties>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -0.93189192 1.9336435 1.0173031 1.0</transform>

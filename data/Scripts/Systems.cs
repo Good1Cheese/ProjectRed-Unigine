@@ -6,6 +6,7 @@ using ProjectRed.Extensions;
 using ProjectRed.Mechanics.Weapon;
 using ProjectRed.Mechanics.Weapon.Pickup;
 using ProjectRed.Mechanics.Weapon.Intersection;
+using ProjectRed.Mechanics.Delay;
 
 namespace ProjectRed;
 
@@ -20,6 +21,7 @@ public class Systems : Component
 
         _systems.Add(new MoveInputSystem());
         _systems.Add(new RotateInputSystem());
+        _systems.Add(new DelayHandlerSystem());
 
         _systems.Add(new OneFrameDeleteSystem<OneFramePickupMarker>());
         _systems.Add(new OneFrameDeleteSystem<IntersectionMarker>());

@@ -56,6 +56,8 @@
 		<Compile Include="data\Scripts\Extensions\EcsExtensions.cs" />
 		<Compile Include="data\Scripts\Extensions\InputExtensions.cs" />
 		<Compile Include="data\Scripts\Extensions\OneFrameDeleteSystem.cs" />
+		<Compile Include="data\Scripts\Mechanics\Delay\DelayHandlerSystem.cs" />
+		<Compile Include="data\Scripts\Mechanics\Delay\DelayMarker.cs" />
 		<Compile Include="data\Scripts\Mechanics\Weapon\ArmSystem.cs" />
 		<Compile Include="data\Scripts\Mechanics\Weapon\FireSystem.cs" />
 		<Compile Include="data\Scripts\Mechanics\Weapon\Intersection\Intersection.cs" />
