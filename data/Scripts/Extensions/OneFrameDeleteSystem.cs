@@ -2,7 +2,7 @@
 
 namespace ProjectRed.Extensions;
 
-public class OneFrameDeleteSystem<T> : IEcsInitSystem, IEcsRunSystem where T : struct
+public class MarkerDeleteSystem<T> : IEcsInitSystem, IEcsRunSystem where T : struct
 {
     private EcsPool<T> _markerPool;
 
