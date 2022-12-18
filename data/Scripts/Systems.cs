@@ -20,13 +20,16 @@ public class Systems : Component
 
         _systems.Add(new MoveInputSystem());
         _systems.Add(new RotateInputSystem());
+
         _systems.Add(new OneFrameDeleteSystem<OneFramePickupMarker>());
         _systems.Add(new OneFrameDeleteSystem<IntersectionMarker>());
         _systems.Add(new IntersectionSystem());
         _systems.Add(new PickupSystem());
 
+        _systems.Add(new FireSystem());
         _systems.Add(new ArmSystem());
         _systems.Add(new ThrowSystem());
+
         _systems.Add(new MoveSystem());
         _systems.Add(new RotateSystem());
 

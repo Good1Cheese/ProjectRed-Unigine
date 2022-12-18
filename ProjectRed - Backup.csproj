@@ -74,6 +74,7 @@
 		<Compile Include="data/Scripts/Mechanics/Weapon/Intersection/Intersection.cs"/>
 		<Compile Include="data/Scripts/Mechanics/Weapon/Intersection/IntersectionSystem.cs"/>
 		<Compile Include="data/Scripts/Mechanics/Weapon/Intersection/IntersectionMarker.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Weapon/FireSystem.cs"/>
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Include="source\AppEditorLogic.cs"/>

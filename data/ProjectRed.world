@@ -756,7 +756,11 @@
 		<node type="NodeReference" id="543742159" name="Pistol">
 			<reference>guid://3bc97773357cd6369c65581d2984fad8d339c057</reference>
 			<properties>
-				<property parent="16556aacd211e61b81a964be26bac505dbe7f2a0" guid="750e8ea7e951bbdafeb859715b77841c66dfd0cb"/>
+				<property parent="16556aacd211e61b81a964be26bac505dbe7f2a0" guid="750e8ea7e951bbdafeb859715b77841c66dfd0cb">
+					<parameter name="_weapon">
+						<parameter name="_bulletNodeLink">guid://77ef9f90623d6daf69583f42ec9075b94dbda3c4</parameter>
+					</parameter>
+				</property>
 			</properties>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -0.93189192 1.9336435 1.0173031 1.0</transform>
 		</node>

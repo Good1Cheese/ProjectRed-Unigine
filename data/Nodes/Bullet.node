@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.16.0.2">
+	<node type="ObjectMeshStatic" id="791302416" name="Bullet">
+		<mesh_name>guid://40f273236109be269d66bf4dd9645848e0bc1f07</mesh_name>
+		<surface name="capsule" physics_friction="1" physics_restitution="1" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
+		<transform>0.050000019 0 0 0.0 0 0.04999999 0 0.0 0 0 0.050000023 0.0 0 0 0 1.0</transform>
+	</node>
+</nodes>

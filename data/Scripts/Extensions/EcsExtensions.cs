@@ -4,6 +4,13 @@ namespace ProjectRed.Extensions;
 
 public static class EcsExtensions
 {
+    public static void Add<T>(this EcsWorld world, in int entity) where T : struct
+    {
+        var pool = world.GetPool<T>();
+
+        pool.Add(entity);
+    }
+
     public static void Add<T>(this EcsWorld world, in int entity, in T existing) where T : struct
     {
         var pool = world.GetPool<T>();

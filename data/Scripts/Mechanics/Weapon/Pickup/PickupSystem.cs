@@ -41,10 +41,10 @@ public class PickupSystem : IEcsInitSystem, IEcsRunSystem
             if (weaponNode.PackedEntity.Unpack(world, out int unpacked))
             {
                 _oneFramePickupMarkerPool.Add(unpacked);
+                _pickupMarkerPool.Add(unpacked);
 
-                ref var pickupMarker = ref _pickupMarkerPool.Add(unpacked);
-                pickupMarker.WeaponParent = gameObject.WeaponSlot;
-                pickupMarker.Head = gameObject.Head;
+                ref var go = ref _gameObjectPool.Get(unpacked);
+                go = gameObject;
             }
         }
     }

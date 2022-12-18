@@ -5,26 +5,22 @@ using Unigine;
 
 namespace ProjectRed.Mechanics.Weapon;
 
-public class ThrowSystem : IEcsInitSystem, IEcsRunSystem
+public class FireSystem : IEcsInitSystem, IEcsRunSystem
 {
-    public const Input.MOUSE_BUTTON ThrowKey = Input.MOUSE_BUTTON.RIGHT;
+    public const Input.MOUSE_BUTTON FireKey = Input.MOUSE_BUTTON.LEFT;
 
-    private EcsPool<Weapon> _weaponPool;
     private EcsPool<GameObject> _gameObjectPool;
-    private EcsPool<PickupMarker> _pickupMarkerPool;
 
     public void Init(IEcsSystems systems)
     {
         var world = systems.GetWorld();
 
-        _weaponPool = world.GetPool<Weapon>();
         _gameObjectPool = world.GetPool<GameObject>();
-        _pickupMarkerPool = world.GetPool<PickupMarker>();
     }
 
     public void Run(IEcsSystems systems)
     {
-        if (!Input.IsMouseButtonPressed(ThrowKey)) return;
+        if (!Input.IsMouseButtonPressed(FireKey)) return;
 
         var world = systems.GetWorld();
 
@@ -32,18 +28,13 @@ public class ThrowSystem : IEcsInitSystem, IEcsRunSystem
 
         foreach (int entity in filter)
         {
-            ref var weapon = ref _weaponPool.Get(entity);
             ref var gameObject = ref _gameObjectPool.Get(entity);
 
-            weapon.Node.SetWorldParent(null);
-
             vec3 forward = gameObject.Head.GetWorldDirection(MathLib.AXIS.Y);
+            vec3 spawn = gameObject.BulletsSpawnPoint.WorldPosition;
 
-            BodyRigid rigid = weapon.Base.ObjectBodyRigid;
-            rigid.Gravity = true;
-            rigid.AddLinearImpulse(forward * 5);
-
-            _pickupMarkerPool.Del(entity);
+            Node bullet = gameObject.BulletNodeLink.Load(spawn);
+            bullet.SetWorldDirection(forward, vec3.UP);
         }
     }
 }

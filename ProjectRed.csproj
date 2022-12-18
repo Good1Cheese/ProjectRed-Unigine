@@ -57,6 +57,7 @@
 		<Compile Include="data\Scripts\Extensions\InputExtensions.cs" />
 		<Compile Include="data\Scripts\Extensions\OneFrameDeleteSystem.cs" />
 		<Compile Include="data\Scripts\Mechanics\Weapon\ArmSystem.cs" />
+		<Compile Include="data\Scripts\Mechanics\Weapon\FireSystem.cs" />
 		<Compile Include="data\Scripts\Mechanics\Weapon\Intersection\Intersection.cs" />
 		<Compile Include="data\Scripts\Mechanics\Weapon\Intersection\IntersectionMarker.cs" />
 		<Compile Include="data\Scripts\Mechanics\Weapon\Intersection\IntersectionSystem.cs" />
