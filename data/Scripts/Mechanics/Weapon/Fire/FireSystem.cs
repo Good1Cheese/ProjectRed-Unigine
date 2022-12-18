@@ -3,7 +3,7 @@ using ProjectRed.Mechanics.Delay;
 using ProjectRed.Mechanics.Weapon.Pickup;
 using Unigine;
 
-namespace ProjectRed.Mechanics.Weapon;
+namespace ProjectRed.Mechanics.Weapon.Fire;
 
 public class FireSystem : IEcsInitSystem, IEcsRunSystem
 {

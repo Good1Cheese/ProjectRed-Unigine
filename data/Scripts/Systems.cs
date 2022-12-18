@@ -7,6 +7,7 @@ using ProjectRed.Mechanics.Weapon;
 using ProjectRed.Mechanics.Weapon.Pickup;
 using ProjectRed.Mechanics.Weapon.Intersection;
 using ProjectRed.Mechanics.Delay;
+using ProjectRed.Mechanics.Weapon.Fire;
 
 namespace ProjectRed;
 

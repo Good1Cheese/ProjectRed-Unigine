@@ -1,5 +1,6 @@
 ﻿using Leopotam.EcsLite;
 using ProjectRed.Mechanics.Object;
+using ProjectRed.Mechanics.Weapon.Fire;
 using Unigine;
 
 namespace ProjectRed.Mechanics.Weapon;
