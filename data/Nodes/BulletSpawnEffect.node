@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodes version="2.16.0.2">
+	<node type="NodeDummy" id="745144038" name="BulletSpawnEffect">
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+		<node type="SoundSource" id="500794470" name="SoundSource">
+			<sample_name>guid://368646ca6b2f07a129957c8c12520e7b4661b19e</sample_name>
+			<sample_stream>0</sample_stream>
+			<source_mask>0x1</source_mask>
+			<reverb_mask>0x1</reverb_mask>
+			<loop>0</loop>
+			<play_on_enable>1</play_on_enable>
+			<restart_on_enable>1</restart_on_enable>
+			<occlusion>1</occlusion>
+			<occlusion_mask>-1</occlusion_mask>
+			<adaptation>0.25</adaptation>
+			<time>0</time>
+			<pitch>1</pitch>
+			<gain>1</gain>
+			<room_rolloff>0</room_rolloff>
+			<air_absorption>0</air_absorption>
+			<min_distance>0</min_distance>
+			<max_distance>10</max_distance>
+			<cone_inner_angle>180</cone_inner_angle>
+			<cone_outer_angle>180</cone_outer_angle>
+			<cone_outer_gain>0</cone_outer_gain>
+			<cone_outer_gain_hf>1</cone_outer_gain_hf>
+			<playing>0</playing>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
+		</node>
+	</node>
+</nodes>

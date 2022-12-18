@@ -745,7 +745,7 @@
 			<properties>
 				<property parent="ab233cb5e516269075fc48afd84b5e42744308b9" guid="bb0a26e3939c5ee64da5690d57f57708211b2ec7">
 					<parameter name="_entities">
-						<value index="0">750e8ea7e951bbdafeb859715b77841c66dfd0cb</value>
+						<value index="0">02c06395c16e5ff067b3728f3027bea2223a2d99</value>
 					</parameter>
 					<parameter name="_player">guid://9d42499ed28fa46537178a80f04ffbdfe7a097b2</parameter>
 				</property>
@@ -756,9 +756,10 @@
 		<node type="NodeReference" id="543742159" name="Pistol">
 			<reference>guid://3bc97773357cd6369c65581d2984fad8d339c057</reference>
 			<properties>
-				<property parent="16556aacd211e61b81a964be26bac505dbe7f2a0" guid="750e8ea7e951bbdafeb859715b77841c66dfd0cb">
+				<property parent="16556aacd211e61b81a964be26bac505dbe7f2a0" guid="02c06395c16e5ff067b3728f3027bea2223a2d99">
 					<parameter name="_weapon">
 						<parameter name="_delayAfterShotInMilliseconds">1500</parameter>
+						<parameter name="_bulletSpawnEffect">guid://1e02f9504abb7c6fe25f7f022f153279006fb984</parameter>
 					</parameter>
 				</property>
 			</properties>

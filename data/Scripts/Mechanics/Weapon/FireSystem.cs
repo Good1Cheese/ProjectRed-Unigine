@@ -44,6 +44,9 @@ public class FireSystem : IEcsInitSystem, IEcsRunSystem
 
             ref var delayMarker = ref _delayMarkerPool.Add(entity);
             delayMarker.Milliseconds = weapon.DelayAfterShotInMilliseconds;
+
+            Node spawnEffect = World.LoadNode(weapon.BulletSpawnEffect);
+            spawnEffect.SetWorldParent(bullet);
         }
     }
 }
