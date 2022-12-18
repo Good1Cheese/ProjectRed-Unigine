@@ -18,13 +18,13 @@
 				<parameter name="_gameObject">
 					<parameter name="_body">284834336</parameter>
 					<parameter name="_head">2032581487</parameter>
-					<parameter name="_playerDummy">534840582</parameter>
 					<parameter name="_weaponSlot">4554051</parameter>
 					<parameter name="_bulletsSpawnPoint">721991908</parameter>
+					<parameter name="_bulletAsset">guid://77ef9f90623d6daf69583f42ec9075b94dbda3c4</parameter>
 				</parameter>
 			</property>
 		</properties>
-		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 2.6990261 2.6021321 -0.055200011 1.0</transform>
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 2.8192101 2.4883184 -0.055200472 1.0</transform>
 		<node type="NodeDummy" id="2032581487" name="Head">
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0.75 1.0</transform>
 			<node type="PlayerDummy" id="534840582" name="Camera">
