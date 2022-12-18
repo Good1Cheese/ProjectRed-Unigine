@@ -28,7 +28,9 @@ public class Systems : Component
         _systems.Add(new IntersectionSystem());
         _systems.Add(new PickupSystem());
 
+        _systems.Add(new OneFrameDeleteSystem<FiredMarker>());
         _systems.Add(new FireSystem());
+        _systems.Add(new BulletSpawnSystem());
         _systems.Add(new ArmSystem());
         _systems.Add(new ThrowSystem());
 

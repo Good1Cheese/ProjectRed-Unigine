@@ -77,6 +77,8 @@
 		<Compile Include="data/Scripts/Mechanics/Weapon/FireSystem.cs"/>
 		<Compile Include="data/Scripts/Mechanics/Delay/DelayHandlerSystem.cs"/>
 		<Compile Include="data/Scripts/Mechanics/Delay/DelayMarker.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Weapon/FiredMarker.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Weapon/BulletSpawnSystem.cs"/>
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Include="source\AppEditorLogic.cs"/>

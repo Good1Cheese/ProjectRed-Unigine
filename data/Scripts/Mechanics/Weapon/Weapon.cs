@@ -16,7 +16,6 @@ public struct Weapon
     public float DelayAfterShotInMilliseconds => _delayAfterShotInMilliseconds;
     public string BulletSpawnEffect => _bulletSpawnEffect;
 
-
     public Node Node { get; set; }
     public Node Base { get; set; }
 }
