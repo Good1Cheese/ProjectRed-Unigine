@@ -22,6 +22,13 @@ public static class EcsExtensions
         component = existing;
     }
 
+    public static void Add<T>(this EcsPool<T> pool, in int entity, in T existing) where T : struct
+    {
+        ref var component = ref pool.Add(entity);
+
+        component = existing;
+    }
+
     public async static Task Del<T>(this EcsPool<T> pool, int entity, float delayInMilliseconds) where T : struct
     {
         await Task.Delay((int)delayInMilliseconds);

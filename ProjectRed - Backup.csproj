@@ -45,38 +45,39 @@
 		</Reference>
 	</ItemGroup>
 	<ItemGroup>
-		<Compile Include="data/Plugins/ecslite-2022.11.22/src/filters.cs"/>
-		<Compile Include="data/Plugins/ecslite-2022.11.22/src/systems.cs"/>
-		<Compile Include="data/Plugins/ecslite-2022.11.22/src/entities.cs"/>
-		<Compile Include="data/Plugins/ecslite-2022.11.22/src/components.cs"/>
-		<Compile Include="data/Plugins/ecslite-2022.11.22/src/worlds.cs"/>
-		<Compile Include="data/Scripts/Startup.cs"/>
-		<Compile Include="data/Scripts/Extensions/EcsExtensions.cs"/>
-		<Compile Include="data/Scripts/Extensions/InputExtensions.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Object/GameObject.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Rotate/Rotation.cs"/>
 		<Compile Include="data/Scripts/Mechanics/Rotate/RotateSystem.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Rotate/RotateInputSystem.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Move/Movement.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Move/MoveInputSystem.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Move/MoveSystem.cs"/>
-		<Compile Include="data/Scripts/Systems.cs"/>
-		<Compile Include="data/Scripts/Entities/IEntity.cs"/>
-		<Compile Include="data/Scripts/Entities/Player.cs"/>
+		<Compile Include="data/Scripts/Extensions/InputExtensions.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Weapon/Intersection/IntersectionMarker.cs"/>
 		<Compile Include="data/Scripts/Extensions/OneFrameDeleteSystem.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Object/GameObject.cs"/>
 		<Compile Include="data/Scripts/Entities/WeaponEntity.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Weapon/Intersection/Intersection.cs"/>
 		<Compile Include="data/Scripts/Mechanics/Weapon/Pickup/PickupMarker.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Weapon/Pickup/PickupSystem.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Weapon/ArmSystem.cs"/>
+		<Compile Include="data/Plugins/ecslite-2022.11.22/src/components.cs"/>
 		<Compile Include="data/Scripts/Mechanics/Weapon/ThrowSystem.cs"/>
 		<Compile Include="data/Scripts/Mechanics/Weapon/Weapon.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Weapon/Pickup/OneFramePickupMarker.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Weapon/Intersection/Intersection.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Weapon/Intersection/IntersectionSystem.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Weapon/Intersection/IntersectionMarker.cs"/>
-		<Compile Include="data/Scripts/Mechanics/Delay/DelayHandlerSystem.cs"/>
+		<Compile Include="data/Scripts/Systems.cs"/>
+		<Compile Include="data/Scripts/Extensions/EcsExtensions.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Weapon/ArmSystem.cs"/>
 		<Compile Include="data/Scripts/Mechanics/Delay/DelayMarker.cs"/>
 		<Compile Include="data/Scripts/Mechanics/Weapon/Fire/FireSystem.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Move/Movement.cs"/>
+		<Compile Include="data/Plugins/ecslite-2022.11.22/src/entities.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Move/MoveInputSystem.cs"/>
+		<Compile Include="data/Plugins/ecslite-2022.11.22/src/systems.cs"/>
+		<Compile Include="data/Plugins/ecslite-2022.11.22/src/filters.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Rotate/Rotation.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Rotate/RotateInputSystem.cs"/>
+		<Compile Include="data/Scripts/Startup.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Weapon/Pickup/PickupSystem.cs"/>
+		<Compile Include="data/Scripts/Entities/IEntity.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Delay/DelayHandlerSystem.cs"/>
+		<Compile Include="data/Plugins/ecslite-2022.11.22/src/worlds.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Weapon/Intersection/IntersectionSystem.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Move/MoveSystem.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Weapon/Pickup/OneFramePickupMarker.cs"/>
+		<Compile Include="data/Scripts/Mechanics/Object/PlayerGameObject.cs"/>
+		<Compile Include="data/Scripts/Entities/PlayerEntity.cs"/>
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Include="source\AppEditorLogic.cs"/>

@@ -1,13 +1,9 @@
 ﻿using Leopotam.EcsLite;
-using ProjectRed;
 using ProjectRed.Mechanics.Delay;
 using ProjectRed.Mechanics.Object;
-using ProjectRed.Mechanics.Weapon.Fire;
-using ProjectRed.Mechanics.Weapon;
 using ProjectRed.Mechanics.Weapon.Pickup;
+using ProjectRed.Extensions;
 using Unigine;
-using static Unigine.Image;
-using Unigine.Plugins.IG;
 
 namespace ProjectRed.Mechanics.Weapon.Fire;
 
@@ -16,6 +12,7 @@ public class FireSystem : IEcsInitSystem, IEcsRunSystem
     public const Input.MOUSE_BUTTON FireKey = Input.MOUSE_BUTTON.LEFT;
 
     private EcsPool<Weapon> _weaponPool;
+    private EcsPool<PlayerGameObject> _playerGameObjectPool;
     private EcsPool<GameObject> _gameObjectPool;
     private EcsPool<DelayMarker> _delayMarkerPool;
 
@@ -24,6 +21,7 @@ public class FireSystem : IEcsInitSystem, IEcsRunSystem
         var world = systems.GetWorld();
 
         _weaponPool = world.GetPool<Weapon>();
+        _playerGameObjectPool = world.GetPool<PlayerGameObject>();
         _gameObjectPool = world.GetPool<GameObject>();
         _delayMarkerPool = world.GetPool<DelayMarker>();
     }
@@ -34,31 +32,41 @@ public class FireSystem : IEcsInitSystem, IEcsRunSystem
 
         var world = systems.GetWorld();
 
-        EcsFilter filter = world.Filter<Weapon>().Inc<GameObject>().Inc<PickupMarker>().Exc<DelayMarker>().End();
+        EcsFilter filter = world.Filter<Weapon>().Inc<PlayerGameObject>().Inc<PickupMarker>().Exc<DelayMarker>().End();
 
         foreach (int entity in filter)
         {
-            ref var gameObject = ref _gameObjectPool.Get(entity);
+            ref var player = ref _playerGameObjectPool.Get(entity);
             ref var weapon = ref _weaponPool.Get(entity);
 
-            Node bullet = SpawnBullet(gameObject);
-
-            ref var delayMarker = ref _delayMarkerPool.Add(entity);
-            delayMarker.Milliseconds = weapon.DelayAfterShotInMilliseconds;
+            Node bullet = SpawnBullet(player);
+            CreateBulletEntity(world, bullet);
 
             Node spawnEffect = World.LoadNode(weapon.BulletSpawnEffect);
             spawnEffect.SetWorldParent(weapon.Node);
+
+            ref var delayMarker = ref _delayMarkerPool.Add(entity);
+            delayMarker.Milliseconds = weapon.DelayAfterShotInMilliseconds;
         }
     }
 
-    private static Node SpawnBullet(in GameObject gameObject)
+    private Node SpawnBullet(in PlayerGameObject player)
     {
-        vec3 spawn = gameObject.BulletsSpawnPoint.WorldPosition;
-        Node result = gameObject.BulletNodeLink.Load(spawn);
+        vec3 spawn = player.BulletsSpawnPoint.WorldPosition;
+        Node result = player.BulletNodeLink.Load(spawn);
 
-        vec3 forward = gameObject.Head.GetWorldDirection(MathLib.AXIS.Y);
+        vec3 forward = player.Head.GetWorldDirection(MathLib.AXIS.Y);
         result.SetWorldDirection(forward, vec3.FORWARD);
 
         return result;
+    }
+
+    private void CreateBulletEntity(EcsWorld world, Node bullet)
+    {
+        int entity = world.NewEntity();
+
+        GameObject gameObject = new() { Node = bullet };
+
+        _gameObjectPool.Add(entity, gameObject);
     }
 }

@@ -22,7 +22,7 @@ public class WeaponEntity : Component, IEntity
         _weapon.Base = node.GetChild(0);
 
         world.Add(entity, _weapon);
-        world.Add<GameObject>(entity);
+        world.Add<PlayerGameObject>(entity);
 
         PackedEntity = world.PackEntity(entity);
     }

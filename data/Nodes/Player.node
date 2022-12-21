@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <nodes version="2.16.0.2">
-	<node type="ObjectMeshStatic" id="284834336" name="Player">
+	<node type="ObjectMeshStatic" id="455842648" name="Player">
 		<mesh_name>guid://40f273236109be269d66bf4dd9645848e0bc1f07</mesh_name>
 		<surface name="capsule" physics_friction="1" physics_restitution="1" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
 		<properties>
-			<property parent="98b346d4567604230d7e1b26d15d784ddba1bd48" guid="f5f2c2e97c2caf34749691034f268286587af82d">
+			<property parent="98b346d4567604230d7e1b26d15d784ddba1bd48" guid="ae4e8eb6530eb69d2645c75872ff22d72244624a">
 				<parameter name="_movement">
 					<parameter name="_speed">5</parameter>
 				</parameter>
@@ -15,19 +15,19 @@
 					<parameter name="_mask">0x1</parameter>
 					<parameter name="_length">3</parameter>
 				</parameter>
-				<parameter name="_gameObject">
-					<parameter name="_body">284834336</parameter>
-					<parameter name="_head">2032581487</parameter>
-					<parameter name="_weaponSlot">4554051</parameter>
-					<parameter name="_bulletsSpawnPoint">721991908</parameter>
+				<parameter name="_player">
+					<parameter name="_body">455842648</parameter>
+					<parameter name="_head">687929641</parameter>
+					<parameter name="_weaponSlot">803932209</parameter>
+					<parameter name="_bulletsSpawnPoint">493896948</parameter>
 					<parameter name="_bulletAsset">guid://77ef9f90623d6daf69583f42ec9075b94dbda3c4</parameter>
 				</parameter>
 			</property>
 		</properties>
-		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 2.8192101 2.4883184 -0.055200472 1.0</transform>
-		<node type="NodeDummy" id="2032581487" name="Head">
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -6.0129719 0.070358515 -0.055200234 1.0</transform>
+		<node type="NodeDummy" id="687929641" name="Head">
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0.75 1.0</transform>
-			<node type="PlayerDummy" id="534840582" name="Camera">
+			<node type="PlayerDummy" id="160107246" name="Camera">
 				<znear>0.300000012</znear>
 				<zfar>100000</zfar>
 				<oblique_frustum_plane>0 0 -1 0</oblique_frustum_plane>
@@ -37,9 +37,9 @@
 				<controlled>1</controlled>
 				<transform>1 0 0 0.0 0 5.9604641e-08 0.99999988 0.0 0 -0.99999988 5.9604641e-08 0.0 0 0 0 1.0</transform>
 			</node>
-			<node type="NodeDummy" id="4554051" name="WeaponSlot">
+			<node type="NodeDummy" id="803932209" name="WeaponSlot">
 				<transform>5.9604627e-08 0.99999964 0 0.0 -0.99999768 5.960451e-08 0 0.0 0 0 0.99999827 0.0 0 1 -0.31999999 1.0</transform>
-				<node type="NodeDummy" id="721991908" name="BulletsSpawn">
+				<node type="NodeDummy" id="493896948" name="BulletsSpawn">
 					<transform>1.0000017 0 0 0.0 0 0.99999976 0 0.0 0 0 1.000001 0.0 0.25 0 0 1.0</transform>
 				</node>
 			</node>

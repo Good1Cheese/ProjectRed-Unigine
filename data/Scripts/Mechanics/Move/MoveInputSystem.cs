@@ -24,7 +24,7 @@ public class MoveInputSystem : IEcsInitSystem, IEcsRunSystem
 
         var world = systems.GetWorld();
 
-        EcsFilter filter = world.Filter<GameObject>().Inc<Movement>().End();
+        EcsFilter filter = world.Filter<Movement>().End();
 
         foreach (int entity in filter)
         {

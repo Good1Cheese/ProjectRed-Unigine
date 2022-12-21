@@ -1,6 +1,7 @@
 using Leopotam.EcsLite;
 using ProjectRed.Mechanics.Object;
 using ProjectRed.Mechanics.Weapon.Pickup;
+using System.Diagnostics;
 using Unigine;
 
 namespace ProjectRed.Mechanics.Weapon.Intersection;
@@ -9,7 +10,7 @@ public class IntersectionSystem : IEcsInitSystem, IEcsRunSystem
 {
     public const Input.KEY PickupKey = Input.KEY.E;
 
-    private EcsPool<GameObject> _gameObjectPool;
+    private EcsPool<PlayerGameObject> _playerGameObjectPool;
     private EcsPool<IntersectionComponent> _intersectionPool;
     private EcsPool<IntersectionMarker> _intersectionMarkerPool;
 
@@ -17,7 +18,7 @@ public class IntersectionSystem : IEcsInitSystem, IEcsRunSystem
     {
         var world = systems.GetWorld();
 
-        _gameObjectPool = world.GetPool<GameObject>();
+        _playerGameObjectPool = world.GetPool<PlayerGameObject>();
         _intersectionPool = world.GetPool<IntersectionComponent>();
         _intersectionMarkerPool = world.GetPool<IntersectionMarker>();
     }
@@ -30,11 +31,11 @@ public class IntersectionSystem : IEcsInitSystem, IEcsRunSystem
 
         if (pickupFilter.GetEntitiesCount() > 0 || !Input.IsKeyPressed(PickupKey)) return;
 
-        EcsFilter filter = world.Filter<GameObject>().Inc<IntersectionComponent>().End();
+        EcsFilter filter = world.Filter<PlayerGameObject>().Inc<IntersectionComponent>().End();
 
         foreach (int entity in filter)
         {
-            ref var gameObject = ref _gameObjectPool.Get(entity);
+            ref var gameObject = ref _playerGameObjectPool.Get(entity);
             ref var intersection = ref _intersectionPool.Get(entity);
 
             vec3 forward = gameObject.Head.GetWorldDirection(MathLib.AXIS.Y);

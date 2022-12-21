@@ -8,7 +8,7 @@ namespace ProjectRed.Mechanics.Weapon.Pickup;
 
 public class PickupSystem : IEcsInitSystem, IEcsRunSystem
 {
-    private EcsPool<GameObject> _gameObjectPool;
+    private EcsPool<PlayerGameObject> _playerGameObject;
     private EcsPool<IntersectionMarker> _intersectionMarkerPool;
     private EcsPool<PickupMarker> _pickupMarkerPool;
     private EcsPool<OneFramePickupMarker> _oneFramePickupMarkerPool;
@@ -17,7 +17,7 @@ public class PickupSystem : IEcsInitSystem, IEcsRunSystem
     {
         var world = systems.GetWorld();
 
-        _gameObjectPool = world.GetPool<GameObject>();
+        _playerGameObject = world.GetPool<PlayerGameObject>();
         _intersectionMarkerPool = world.GetPool<IntersectionMarker>();
         _pickupMarkerPool = world.GetPool<PickupMarker>();
         _oneFramePickupMarkerPool = world.GetPool<OneFramePickupMarker>();
@@ -27,11 +27,11 @@ public class PickupSystem : IEcsInitSystem, IEcsRunSystem
     {
         var world = systems.GetWorld();
 
-        EcsFilter filter = world.Filter<GameObject>().Inc<IntersectionComponent>().Inc<IntersectionMarker>().End();
+        EcsFilter filter = world.Filter<PlayerGameObject>().Inc<IntersectionComponent>().Inc<IntersectionMarker>().End();
 
         foreach (int entity in filter)
         {
-            ref var gameObject = ref _gameObjectPool.Get(entity);
+            ref var gameObject = ref _playerGameObject.Get(entity);
             ref var intersection = ref _intersectionMarkerPool.Get(entity);
 
             var weaponNode = intersection.Result.GetComponentInParent<WeaponEntity>();
@@ -43,7 +43,7 @@ public class PickupSystem : IEcsInitSystem, IEcsRunSystem
                 _oneFramePickupMarkerPool.Add(unpacked);
                 _pickupMarkerPool.Add(unpacked);
 
-                ref var go = ref _gameObjectPool.Get(unpacked);
+                ref var go = ref _playerGameObject.Get(unpacked);
                 go = gameObject;
             }
         }

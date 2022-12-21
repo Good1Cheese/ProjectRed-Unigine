@@ -20,13 +20,13 @@ public class PlayerEntity : Component, IEntity
     private IntersectionComponent _interaction;
 
     [ShowInEditor]
-    private GameObject _gameObject;
+    private PlayerGameObject _player;
 
     public void Create(EcsWorld world)
     {
         int entity = world.NewEntity();
 
-        world.Add(entity, _gameObject);
+        world.Add(entity, _player);
         world.Add(entity, _interaction);
         world.Add(entity, _movement);
         world.Add(entity, _rotation);

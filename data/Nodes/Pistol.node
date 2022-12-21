@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <nodes version="2.16.0.2">
-	<node type="ObjectDummy" id="1996975359" name="Pistol">
-		<body type="BodyRigid" id="481233810" frozen="0">
-			<shape type="ShapeBox" id="481233810" transform="1 0 0 0 0 1 0 0 0 0 1 0 0.186771393 0.00787496567 0.0733765364 1">
+	<node type="ObjectDummy" id="1952433170" name="Pistol">
+		<body type="BodyRigid" id="259796504" frozen="0">
+			<shape type="ShapeBox" id="259796504" transform="1 0 0 0 0 1 0 0 0 0 1 0 0.186771393 0.00787496567 0.0733765364 1">
 				<size>0.5604496 0.250028849 0.415405869</size>
 			</shape>
 		</body>
 		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
-		<node type="ObjectMeshStatic" id="1647844795" name="Cube 1">
+		<node type="ObjectMeshStatic" id="1932857849" name="Cube 1">
 			<mesh_name>guid://d8339adae60aac7102b7bb1cda0c9bcb8bf8beae</mesh_name>
 			<surface name="box" intersection_mask="0x2" physics_friction="1" physics_restitution="1" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
 			<transform>0.49999988 -4.371131e-08 -3.8213637e-15 0.0 1.2121513e-08 0.13865417 1.212153e-08 0.0 1.9217974e-22 -1.3223321e-08 0.1512572 0.0 0.17410892 0 0.19715405 1.0</transform>
 		</node>
-		<node type="ObjectMeshStatic" id="2088173550" name="Cube 1_1">
+		<node type="ObjectMeshStatic" id="2087930175" name="Cube 1_1">
 			<mesh_name>guid://d8339adae60aac7102b7bb1cda0c9bcb8bf8beae</mesh_name>
 			<surface name="box" intersection_mask="0x2" physics_friction="1" physics_restitution="1" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
 			<transform>0.00012210011 -2.788484e-13 0.24999997 0.0 7.5164028e-21 0.13865316 1.5465285e-13 0.0 -0.1512567 -8.2381822e-17 7.387386e-05 0.0 0 0 0 1.0</transform>

@@ -10,7 +10,7 @@ public class ThrowSystem : IEcsInitSystem, IEcsRunSystem
     public const Input.MOUSE_BUTTON ThrowKey = Input.MOUSE_BUTTON.RIGHT;
 
     private EcsPool<Weapon> _weaponPool;
-    private EcsPool<GameObject> _gameObjectPool;
+    private EcsPool<PlayerGameObject> _gameObjectPool;
     private EcsPool<PickupMarker> _pickupMarkerPool;
 
     public void Init(IEcsSystems systems)
@@ -18,7 +18,7 @@ public class ThrowSystem : IEcsInitSystem, IEcsRunSystem
         var world = systems.GetWorld();
 
         _weaponPool = world.GetPool<Weapon>();
-        _gameObjectPool = world.GetPool<GameObject>();
+        _gameObjectPool = world.GetPool<PlayerGameObject>();
         _pickupMarkerPool = world.GetPool<PickupMarker>();
     }
 
@@ -28,7 +28,7 @@ public class ThrowSystem : IEcsInitSystem, IEcsRunSystem
 
         var world = systems.GetWorld();
 
-        EcsFilter filter = world.Filter<Weapon>().Inc<GameObject>().Inc<PickupMarker>().End();
+        EcsFilter filter = world.Filter<Weapon>().Inc<PlayerGameObject>().Inc<PickupMarker>().End();
 
         foreach (int entity in filter)
         {
