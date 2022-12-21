@@ -57,7 +57,7 @@ public class FireSystem : IEcsInitSystem, IEcsRunSystem
         Node result = gameObject.BulletNodeLink.Load(spawn);
 
         vec3 forward = gameObject.Head.GetWorldDirection(MathLib.AXIS.Y);
-        result.SetWorldDirection(forward, vec3.UP);
+        result.SetWorldDirection(forward, vec3.FORWARD);
 
         return result;
     }
