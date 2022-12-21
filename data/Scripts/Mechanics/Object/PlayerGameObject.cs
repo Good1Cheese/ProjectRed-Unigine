@@ -19,11 +19,17 @@ public struct PlayerGameObject
     private Node _bulletsSpawnPoint;
 
     [ShowInEditor]
-    private AssetLinkNode _bulletAsset;
+    [ParameterFile]
+    private string _bullet;
+
+    [ShowInEditor]
+    [ParameterFile]
+    private string _bulletSpawnEffect;
 
     public Node Body => _body;
     public Node Head => _head;
     public Node WeaponSlot => _weaponSlot;
     public Node BulletsSpawnPoint => _bulletsSpawnPoint;
-    public AssetLinkNode BulletNodeLink => _bulletAsset;
+    public string Bullet => _bullet;
+    public string BulletSpawnEffect => _bulletSpawnEffect;
 }

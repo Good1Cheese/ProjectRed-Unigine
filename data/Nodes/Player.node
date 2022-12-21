@@ -4,7 +4,7 @@
 		<mesh_name>guid://40f273236109be269d66bf4dd9645848e0bc1f07</mesh_name>
 		<surface name="capsule" physics_friction="1" physics_restitution="1" material="4dfec30f491f753f6e89094db6d3d695e89f9d6f"/>
 		<properties>
-			<property parent="98b346d4567604230d7e1b26d15d784ddba1bd48" guid="ae4e8eb6530eb69d2645c75872ff22d72244624a">
+			<property parent="ea5e73a7109e5cda3ec286710ee9cd1c2dc385cb" guid="acaad6c60c04bf6d6e9719e89615b427191fa35a">
 				<parameter name="_movement">
 					<parameter name="_speed">5</parameter>
 				</parameter>
@@ -20,11 +20,12 @@
 					<parameter name="_head">687929641</parameter>
 					<parameter name="_weaponSlot">803932209</parameter>
 					<parameter name="_bulletsSpawnPoint">493896948</parameter>
-					<parameter name="_bulletAsset">guid://77ef9f90623d6daf69583f42ec9075b94dbda3c4</parameter>
+					<parameter name="_bullet">guid://77ef9f90623d6daf69583f42ec9075b94dbda3c4</parameter>
+					<parameter name="_bulletSpawnEffect">guid://1e02f9504abb7c6fe25f7f022f153279006fb984</parameter>
 				</parameter>
 			</property>
 		</properties>
-		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -6.0129719 0.070358515 -0.055200234 1.0</transform>
+		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 -5.9071183 -0.24447861 -0.055200219 1.0</transform>
 		<node type="NodeDummy" id="687929641" name="Head">
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0.75 1.0</transform>
 			<node type="PlayerDummy" id="160107246" name="Camera">

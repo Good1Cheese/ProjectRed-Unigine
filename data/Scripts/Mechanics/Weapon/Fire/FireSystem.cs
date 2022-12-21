@@ -36,13 +36,13 @@ public class FireSystem : IEcsInitSystem, IEcsRunSystem
 
         foreach (int entity in filter)
         {
-            ref var player = ref _playerGameObjectPool.Get(entity);
+            ref var gameObject = ref _playerGameObjectPool.Get(entity);
             ref var weapon = ref _weaponPool.Get(entity);
 
-            Node bullet = SpawnBullet(player);
+            Node bullet = SpawnBullet(gameObject);
             CreateBulletEntity(world, bullet);
 
-            Node spawnEffect = World.LoadNode(weapon.BulletSpawnEffect);
+            Node spawnEffect = World.LoadNode(gameObject.BulletSpawnEffect);
             spawnEffect.SetWorldParent(weapon.Node);
 
             ref var delayMarker = ref _delayMarkerPool.Add(entity);
@@ -50,13 +50,12 @@ public class FireSystem : IEcsInitSystem, IEcsRunSystem
         }
     }
 
-    private Node SpawnBullet(in PlayerGameObject player)
+    private Node SpawnBullet(in PlayerGameObject gameObject)
     {
-        vec3 spawn = player.BulletsSpawnPoint.WorldPosition;
-        Node result = player.BulletNodeLink.Load(spawn);
+        Node result = World.LoadNode(gameObject.Bullet);
 
-        vec3 forward = player.Head.GetWorldDirection(MathLib.AXIS.Y);
-        result.SetWorldDirection(forward, vec3.FORWARD);
+        result.WorldPosition = gameObject.BulletsSpawnPoint.WorldPosition;
+        result.SetWorldDirection(gameObject.Head.GetWorldDirection(MathLib.AXIS.Y), vec3.FORWARD);
 
         return result;
     }

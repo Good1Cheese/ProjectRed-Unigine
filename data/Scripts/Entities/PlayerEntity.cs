@@ -7,7 +7,7 @@ using ProjectRed.Mechanics.Rotate;
 using ProjectRed.Mechanics.Weapon.Intersection;
 using Unigine;
 
-[Component(PropertyGuid = "98b346d4567604230d7e1b26d15d784ddba1bd48")]
+[Component(PropertyGuid = "ea5e73a7109e5cda3ec286710ee9cd1c2dc385cb")]
 public class PlayerEntity : Component, IEntity
 {
     [ShowInEditor]
