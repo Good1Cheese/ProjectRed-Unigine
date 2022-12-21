@@ -59,7 +59,9 @@
 		<Compile Include="data\Scripts\Mechanics\Delay\DelayHandlerSystem.cs" />
 		<Compile Include="data\Scripts\Mechanics\Delay\DelayMarker.cs" />
 		<Compile Include="data\Scripts\Mechanics\Weapon\ArmSystem.cs" />
-		<Compile Include="data\Scripts\Mechanics\Weapon\FireSystem.cs" />
+		<Compile Include="data\Scripts\Mechanics\Weapon\BulletSpawnSystem.cs" />
+		<Compile Include="data\Scripts\Mechanics\Weapon\Fire\FiredMarker.cs" />
+		<Compile Include="data\Scripts\Mechanics\Weapon\Fire\FireSystem.cs" />
 		<Compile Include="data\Scripts\Mechanics\Weapon\Intersection\Intersection.cs" />
 		<Compile Include="data\Scripts\Mechanics\Weapon\Intersection\IntersectionMarker.cs" />
 		<Compile Include="data\Scripts\Mechanics\Weapon\Intersection\IntersectionSystem.cs" />
