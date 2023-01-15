@@ -86,9 +86,6 @@
 		<Compile Include="source\AppWorldLogic.cs" />
 		<Compile Include="source\main.cs" />
 	</ItemGroup>
-	<ItemGroup>
-	  <PackageReference Include="Ninject" Version="3.3.6" />
-	</ItemGroup>
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
 		<Exec Command="&quot;$(DOTNET_HOST_PATH)&quot; &quot;$(OutputPath)cspropgen_x64d.dll&quot; -p &quot;$(OutputPath)$(AssemblyName).dll&quot; -data_path ../data/" Condition="'$(Configuration)'=='Debug' And $(SkipPostBuild)=='false'" />
 		<Exec Command="&quot;$(DOTNET_HOST_PATH)&quot; &quot;$(OutputPath)cspropgen_x64.dll&quot; -p &quot;$(OutputPath)$(AssemblyName).dll&quot; -data_path ../data/" Condition="'$(Configuration)'=='Release' And $(SkipPostBuild)=='false'" />
