@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="Container.cs.meta" />
+		<None Remove="InjectAttribute.cs.meta" />
+		<None Remove="Installer.cs.meta" />
+		<None Remove="Tests\BindGetTest.cs.meta" />
+		<None Remove="Tests\TestBindable.cs.meta" />
+		<None Remove="Tests\TestIfContainerWorks.cs.meta" />
+		<None Remove="XorterDI.csproj.meta" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="UnigineSharp_x64d">
+			<HintPath>..\..\bin\UnigineSharp_x64d.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+</Project>
