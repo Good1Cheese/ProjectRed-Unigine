@@ -1,6 +1,4 @@
-﻿using Leopotam.EcsLite;
-
-namespace ProjectRed.Entities;
+﻿namespace Leopotam.EcsLite;
 
 public interface IEntity
 {
