@@ -754,6 +754,7 @@
 					<parameter name="_player">guid://9d42499ed28fa46537178a80f04ffbdfe7a097b2</parameter>
 				</property>
 				<property parent="efaac500af98f45ff5d8363228e39fe99f75e834" guid="3ed8eee330cc86e66107710d2b1fdf08e7b276c7"/>
+				<property parent="e59833d99a030b6461e45f73854a9e362f88801d" guid="ebe43bf601f002dd3e5826984b21791736a0438a"/>
 			</properties>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
 		</node>

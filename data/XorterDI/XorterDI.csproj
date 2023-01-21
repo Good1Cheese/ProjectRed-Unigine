@@ -17,6 +17,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\LeoEcsLite\LeoEcsLite.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<Reference Include="UnigineSharp_x64d">
 			<HintPath>..\..\bin\UnigineSharp_x64d.dll</HintPath>
 		</Reference>

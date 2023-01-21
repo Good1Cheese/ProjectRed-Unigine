@@ -45,7 +45,6 @@
 		</Reference>
 	</ItemGroup>
 	<ItemGroup>
-		<Compile Include="data\Scripts\Entities\IEntity.cs" />
 		<Compile Include="data\Scripts\Entities\PlayerEntity.cs" />
 		<Compile Include="data\Scripts\Entities\WeaponEntity.cs" />
 		<Compile Include="data\Scripts\Extensions\EcsExtensions.cs" />
