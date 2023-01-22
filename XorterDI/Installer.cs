@@ -6,7 +6,7 @@ namespace XorterDI;
 [Component(PropertyGuid = "cdb60996262533fd12be6538eee667373fa11b2a")]
 public class Installer : Component
 {
-    private readonly Container _container = new();
+    protected readonly Container _container = new();
 
     private void Init()
     {
@@ -21,6 +21,8 @@ public class Installer : Component
 
         foreach (Node node in nodes)
         {
+            Log.MessageLine(node.Name);
+
             var entity = node.GetComponent<IEntity>();
 
             if (entity == null) continue;
@@ -29,8 +31,5 @@ public class Installer : Component
         }
     }
 
-    public virtual void InstallBindings()
-    {
-
-    }
+    public virtual void InstallBindings() { }
 }

@@ -1,6 +1,5 @@
 using System;
 using Unigine;
-using XorterDI.Tests;
 
 namespace UnigineApp
 {
@@ -11,9 +10,9 @@ namespace UnigineApp
 		{
 			Engine.Init(args);
 
-			AppSystemLogic systemLogic = new AppSystemLogic();
-			AppWorldLogic worldLogic = new AppWorldLogic();
-			AppEditorLogic editorLogic = new AppEditorLogic();
+			AppSystemLogic systemLogic = new();
+			AppWorldLogic worldLogic = new();
+			AppEditorLogic editorLogic = new();
 
 			Engine.Main(systemLogic, worldLogic, editorLogic);
 

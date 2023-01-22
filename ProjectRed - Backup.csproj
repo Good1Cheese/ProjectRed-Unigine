@@ -45,8 +45,11 @@
 		</Reference>
 	</ItemGroup>
 	<ItemGroup>
+		<Compile Include="data\Scripts\EcsSystemsHandler.cs"/>
+		<Compile Include="data\Scripts\EcsWorldHandler.cs"/>
 		<Compile Include="data\Scripts\Entities\PlayerEntity.cs"/>
 		<Compile Include="data\Scripts\Entities\WeaponEntity.cs"/>
+		<Compile Include="data\Scripts\EntitySpawn.cs"/>
 		<Compile Include="data\Scripts\Extensions\EcsExtensions.cs"/>
 		<Compile Include="data\Scripts\Extensions\InputExtensions.cs"/>
 		<Compile Include="data\Scripts\Extensions\OneFrameDeleteSystem.cs"/>
@@ -64,7 +67,7 @@
 		<Compile Include="data\Scripts\Mechanics\Weapon\Pickup\PickupSystem.cs"/>
 		<Compile Include="data\Scripts\Mechanics\Weapon\ThrowSystem.cs"/>
 		<Compile Include="data\Scripts\Mechanics\Weapon\Weapon.cs"/>
-		<Compile Include="data\Scripts\Systems.cs"/>
+		<Compile Include="data\Scripts\SpawnableEntity.cs"/>
 		<Compile Include="data\Scripts\Mechanics\Move\MoveInputSystem.cs"/>
 		<Compile Include="data\Scripts\Mechanics\Move\Movement.cs"/>
 		<Compile Include="data\Scripts\Mechanics\Move\MoveSystem.cs"/>
@@ -72,7 +75,6 @@
 		<Compile Include="data\Scripts\Mechanics\Rotate\RotateInputSystem.cs"/>
 		<Compile Include="data\Scripts\Mechanics\Rotate\RotateSystem.cs"/>
 		<Compile Include="data\Scripts\Mechanics\Rotate\Rotation.cs"/>
-		<Compile Include="data\Scripts\Startup.cs"/>
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Include="source\AppEditorLogic.cs"/>

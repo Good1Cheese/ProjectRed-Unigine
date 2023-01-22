@@ -3,6 +3,7 @@ using ProjectRed.Extensions;
 using ProjectRed.Mechanics.Object;
 using ProjectRed.Mechanics.Weapon;
 using Unigine;
+using XorterDI;
 
 namespace ProjectRed.Entities;
 
@@ -14,6 +15,7 @@ public class WeaponEntity : Component, IEntity
 
     public EcsPackedEntity PackedEntity { get; set; }
 
+    [Inject]
     public void Create(EcsWorld world)
     {
         int entity = world.NewEntity();

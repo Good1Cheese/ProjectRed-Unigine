@@ -747,10 +747,17 @@
 		</node>
 		<node type="NodeDummy" id="23256947" name="Game">
 			<properties>
-				<property parent="ab233cb5e516269075fc48afd84b5e42744308b9" guid="dc641360319c2f3f99577392272dfdc95583ec94">
-					<parameter name="_player">guid://9d42499ed28fa46537178a80f04ffbdfe7a097b2</parameter>
+				<property parent="c74731648b7e4d7334efb43607ae9e1da42188d8" guid="137fae9a26862d311109c4dc37d99a8bdda22e6e"/>
+				<property parent="04e16e9b1b16533ea2c9e185f687652093b9d5ff" guid="5f9a74d40a875a2380a37926bbb73e4ddd14cb48">
+					<parameter name="_entities">
+						<value index="0">
+							<parameter name="_position">0 0 1</parameter>
+							<parameter name="_nodeLink">guid://9d42499ed28fa46537178a80f04ffbdfe7a097b2</parameter>
+						</value>
+					</parameter>
 				</property>
-				<property parent="efaac500af98f45ff5d8363228e39fe99f75e834" guid="3ed8eee330cc86e66107710d2b1fdf08e7b276c7"/>
+				<property parent="5217ecd3109d0c16d55f547d4e250bb81bf3dbb7" guid="805c88dbfd0c287ee27d35c5e0742c604163743f"/>
+				<property parent="4fbd8b2465035c33b551f3f6ebd25adde5e69e98" guid="59ccd165da20d3800bdeb0dfd6fdc8b2deab1069"/>
 			</properties>
 			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
 		</node>

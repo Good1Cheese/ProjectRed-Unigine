@@ -1,22 +1,22 @@
 using Leopotam.EcsLite;
+using ProjectRed.Extensions;
+using ProjectRed.Mechanics.Delay;
 using ProjectRed.Mechanics.Move;
 using ProjectRed.Mechanics.Rotate;
-using Unigine;
-using ProjectRed.Extensions;
-using ProjectRed.Mechanics.Weapon;
-using ProjectRed.Mechanics.Weapon.Pickup;
-using ProjectRed.Mechanics.Weapon.Intersection;
-using ProjectRed.Mechanics.Delay;
 using ProjectRed.Mechanics.Weapon.Fire;
+using ProjectRed.Mechanics.Weapon.Intersection;
+using ProjectRed.Mechanics.Weapon.Pickup;
+using ProjectRed.Mechanics.Weapon;
+using Unigine;
 
 namespace ProjectRed;
 
-[Component(PropertyGuid = "efaac500af98f45ff5d8363228e39fe99f75e834")]
-public class Systems : Component
+[Component(PropertyGuid = "4fbd8b2465035c33b551f3f6ebd25adde5e69e98")]
+public class EcsSystemsHandler : Component
 {
     private EcsSystems _systems;
 
-    public void Initialize(EcsWorld world)
+    public void Create(EcsWorld world)
     {
         _systems = new(world);
 
