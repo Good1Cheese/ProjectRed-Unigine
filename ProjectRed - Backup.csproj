@@ -50,6 +50,7 @@
 		<Compile Include="data\Scripts\Extensions\EcsExtensions.cs"/>
 		<Compile Include="data\Scripts\Extensions\InputExtensions.cs"/>
 		<Compile Include="data\Scripts\Extensions\OneFrameDeleteSystem.cs"/>
+		<Compile Include="data\Scripts\GameInstaller.cs"/>
 		<Compile Include="data\Scripts\Mechanics\Delay\DelayHandlerSystem.cs"/>
 		<Compile Include="data\Scripts\Mechanics\Delay\DelayMarker.cs"/>
 		<Compile Include="data\Scripts\Mechanics\Object\PlayerGameObject.cs"/>
@@ -72,7 +73,6 @@
 		<Compile Include="data\Scripts\Mechanics\Rotate\RotateSystem.cs"/>
 		<Compile Include="data\Scripts\Mechanics\Rotate\Rotation.cs"/>
 		<Compile Include="data\Scripts\Startup.cs"/>
-		<Compile Include="data/LeoEcsLite/IEntity.cs"/>
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Include="source\AppEditorLogic.cs"/>
@@ -81,8 +81,8 @@
 		<Compile Include="source\main.cs"/>
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="data\LeoEcsLite\LeoEcsLite.csproj"/>
-		<ProjectReference Include="data\XorterDI\XorterDI.csproj"/>
+		<ProjectReference Include="LeoEcsLite\LeoEcsLite.csproj"/>
+		<ProjectReference Include="XorterDI\XorterDI.csproj"/>
 	</ItemGroup>
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
 		<Exec Command="&quot;$(DOTNET_HOST_PATH)&quot; &quot;$(OutputPath)cspropgen_x64d.dll&quot; -p &quot;$(OutputPath)$(AssemblyName).dll&quot; -data_path ../data/" Condition="&apos;$(Configuration)&apos;==&apos;Debug&apos; And $(SkipPostBuild)==&apos;false&apos;"/>

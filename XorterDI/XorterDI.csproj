@@ -4,6 +4,7 @@
 		<TargetFramework>net6.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -21,9 +22,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Reference Include="UnigineSharp_x64d">
-			<HintPath>..\..\bin\UnigineSharp_x64d.dll</HintPath>
-		</Reference>
+	  <Reference Include="UnigineSharp_x64d">
+	    <HintPath>..\bin\UnigineSharp_x64d.dll</HintPath>
+	  </Reference>
 	</ItemGroup>
 
 </Project>

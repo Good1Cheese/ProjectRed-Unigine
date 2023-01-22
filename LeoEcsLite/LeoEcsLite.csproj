@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="ecslite-2022.11.22\.gitignore" />
+		<None Remove="ecslite-2022.11.22\.gitignore.meta" />
+		<None Remove="ecslite-2022.11.22\Leopotam.EcsLite.asmdef" />
+		<None Remove="ecslite-2022.11.22\Leopotam.EcsLite.asmdef.meta" />
+		<None Remove="ecslite-2022.11.22\LICENSE.md" />
+		<None Remove="ecslite-2022.11.22\LICENSE.md.meta" />
+		<None Remove="ecslite-2022.11.22\package.json" />
+		<None Remove="ecslite-2022.11.22\package.json.meta" />
+		<None Remove="ecslite-2022.11.22\README.md" />
+		<None Remove="ecslite-2022.11.22\README.md.meta" />
+		<None Remove="IEntity.cs.meta" />
+		<None Remove="LeoEcsLite.csproj.meta" />
+	</ItemGroup>
+
+</Project>
