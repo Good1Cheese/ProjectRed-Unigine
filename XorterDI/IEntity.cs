@@ -1,9 +1,6 @@
-﻿using XorterDI;
-
-namespace Leopotam.EcsLite;
+﻿namespace Leopotam.EcsLite;
 
 public interface IEntity
 {
-    [Inject]
-    void Create(EcsWorld world);
+    
 }
