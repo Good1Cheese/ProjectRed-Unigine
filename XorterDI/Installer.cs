@@ -4,7 +4,7 @@ using Unigine;
 namespace XorterDI;
 
 [Component(PropertyGuid = "cdb60996262533fd12be6538eee667373fa11b2a")]
-public class Installer : Component
+public abstract class Installer : Component
 {
     protected readonly Container _container = new();
 
@@ -21,8 +21,6 @@ public class Installer : Component
 
         foreach (Node node in nodes)
         {
-            Log.MessageLine(node.Name);
-
             var entity = node.GetComponent<IEntity>();
 
             if (entity == null) continue;
@@ -31,5 +29,5 @@ public class Installer : Component
         }
     }
 
-    public virtual void InstallBindings() { }
+    public abstract void InstallBindings();
 }
