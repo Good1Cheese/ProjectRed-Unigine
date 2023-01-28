@@ -83,8 +83,8 @@
 		<Compile Include="source\main.cs" />
 	</ItemGroup>
 	<ItemGroup>
+		<ProjectReference Include="..\..\C#\XorterDI\XorterDI.csproj" />
 		<ProjectReference Include="LeoEcsLite\LeoEcsLite.csproj" />
-		<ProjectReference Include="XorterDI\XorterDI.csproj" />
 	</ItemGroup>
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
 		<Exec Command="&quot;$(DOTNET_HOST_PATH)&quot; &quot;$(OutputPath)cspropgen_x64d.dll&quot; -p &quot;$(OutputPath)$(AssemblyName).dll&quot; -data_path ../data/" Condition="'$(Configuration)'=='Debug' And $(SkipPostBuild)=='false'" />
