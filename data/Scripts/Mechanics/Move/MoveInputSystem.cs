@@ -30,7 +30,7 @@ public class MoveInputSystem : IEcsInitSystem, IEcsRunSystem
         {
             ref var movement = ref _movementPool.Get(entity);
 
-            movement.Input = _input;
+            movement.Input = (vec3)_input;
         }
     }
 

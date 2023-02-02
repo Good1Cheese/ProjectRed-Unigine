@@ -3,7 +3,6 @@ using Unigine;
 
 namespace ProjectRed.Mechanics.Rotate;
 
-[Serializable]
 public struct Rotation
 {
     [ShowInEditor]

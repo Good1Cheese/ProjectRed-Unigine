@@ -47,44 +47,50 @@
 	<ItemGroup>
 		<Compile Include="data\Scripts\EcsSystemsHandler.cs" />
 		<Compile Include="data\Scripts\EcsWorldHandler.cs" />
-		<Compile Include="data\Scripts\Entities\PlayerEntity.cs" />
+		<Compile Include="data\Scripts\EntitiesSpawn.cs" />
+		<Compile Include="data\Scripts\Entities\PlayerEnity.cs" />
 		<Compile Include="data\Scripts\Entities\WeaponEntity.cs" />
-		<Compile Include="data\Scripts\EntitySpawn.cs" />
 		<Compile Include="data\Scripts\Extensions\EcsExtensions.cs" />
 		<Compile Include="data\Scripts\Extensions\InputExtensions.cs" />
 		<Compile Include="data\Scripts\Extensions\OneFrameDeleteSystem.cs" />
 		<Compile Include="data\Scripts\GameInstaller.cs" />
 		<Compile Include="data\Scripts\Mechanics\Delay\DelayHandlerSystem.cs" />
 		<Compile Include="data\Scripts\Mechanics\Delay\DelayMarker.cs" />
+		<Compile Include="data\Scripts\Mechanics\Intersection\Intersection.cs" />
+		<Compile Include="data\Scripts\Mechanics\Intersection\IntersectionMarker.cs" />
+		<Compile Include="data\Scripts\Mechanics\Intersection\IntersectionSystem.cs" />
+		<Compile Include="data\Scripts\Mechanics\Move\MoveInputSystem.cs" />
+		<Compile Include="data\Scripts\Mechanics\Move\Movement.cs" />
+		<Compile Include="data\Scripts\Mechanics\Move\MoveSystem.cs" />
+		<Compile Include="data\Scripts\Mechanics\Object\GameObject.cs" />
 		<Compile Include="data\Scripts\Mechanics\Object\PlayerGameObject.cs" />
+		<Compile Include="data\Scripts\Mechanics\Rotate\RotateInputSystem.cs" />
+		<Compile Include="data\Scripts\Mechanics\Rotate\RotateSystem.cs" />
+		<Compile Include="data\Scripts\Mechanics\Rotate\Rotation.cs" />
 		<Compile Include="data\Scripts\Mechanics\Weapon\ArmSystem.cs" />
-		<Compile Include="data\Scripts\Mechanics\Weapon\Fire\FireSystem.cs" />
-		<Compile Include="data\Scripts\Mechanics\Weapon\Intersection\Intersection.cs" />
-		<Compile Include="data\Scripts\Mechanics\Weapon\Intersection\IntersectionMarker.cs" />
-		<Compile Include="data\Scripts\Mechanics\Weapon\Intersection\IntersectionSystem.cs" />
+		<Compile Include="data\Scripts\Mechanics\Weapon\FireSystem.cs" />
 		<Compile Include="data\Scripts\Mechanics\Weapon\Pickup\OneFramePickupMarker.cs" />
 		<Compile Include="data\Scripts\Mechanics\Weapon\Pickup\PickupMarker.cs" />
 		<Compile Include="data\Scripts\Mechanics\Weapon\Pickup\PickupSystem.cs" />
 		<Compile Include="data\Scripts\Mechanics\Weapon\ThrowSystem.cs" />
 		<Compile Include="data\Scripts\Mechanics\Weapon\Weapon.cs" />
 		<Compile Include="data\Scripts\SpawnableEntity.cs" />
-		<Compile Include="data\Scripts\Mechanics\Move\MoveInputSystem.cs" />
-		<Compile Include="data\Scripts\Mechanics\Move\Movement.cs" />
-		<Compile Include="data\Scripts\Mechanics\Move\MoveSystem.cs" />
-		<Compile Include="data\Scripts\Mechanics\Object\GameObject.cs" />
-		<Compile Include="data\Scripts\Mechanics\Rotate\RotateInputSystem.cs" />
-		<Compile Include="data\Scripts\Mechanics\Rotate\RotateSystem.cs" />
-		<Compile Include="data\Scripts\Mechanics\Rotate\Rotation.cs" />
+		<Compile Include="LeoEcsLite\src\components.cs" />
+		<Compile Include="LeoEcsLite\src\entities.cs" />
+		<Compile Include="LeoEcsLite\src\filters.cs" />
+		<Compile Include="LeoEcsLite\src\systems.cs" />
+		<Compile Include="LeoEcsLite\src\worlds.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Include="source\AppEditorLogic.cs" />
 		<Compile Include="source\AppSystemLogic.cs" />
 		<Compile Include="source\AppWorldLogic.cs" />
 		<Compile Include="source\main.cs" />
-	</ItemGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\..\C#\XorterDI\XorterDI.csproj" />
-		<ProjectReference Include="LeoEcsLite\LeoEcsLite.csproj" />
+		<Compile Include="XorterDI\Container.cs" />
+		<Compile Include="XorterDI\IEntity.cs" />
+		<Compile Include="XorterDI\InjectAttribute.cs" />
+		<Compile Include="XorterDI\Installer.cs" />
+		<Compile Include="XorterDI\XorterDIException.cs" />
 	</ItemGroup>
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
 		<Exec Command="&quot;$(DOTNET_HOST_PATH)&quot; &quot;$(OutputPath)cspropgen_x64d.dll&quot; -p &quot;$(OutputPath)$(AssemblyName).dll&quot; -data_path ../data/" Condition="'$(Configuration)'=='Debug' And $(SkipPostBuild)=='false'" />

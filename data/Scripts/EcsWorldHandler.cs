@@ -1,9 +1,10 @@
 using Leopotam.EcsLite;
+using ProjectRed;
 using Unigine;
 
 namespace ProjectRed;
 
-[Component(PropertyGuid = "5217ecd3109d0c16d55f547d4e250bb81bf3dbb7")]
+[Component(PropertyGuid = "b518793a05a437515ab9087c6551c9aba9a3530e")]
 public class EcsWorldHandler : Component
 {
     private EcsWorld _world;

@@ -1,10 +1,11 @@
-﻿using System;
-using Unigine;
+﻿using Unigine;
 
 namespace ProjectRed.Mechanics.Object;
 
-[Serializable]
 public struct GameObject
 {
-    public Node Node { get; set; }
+    [ShowInEditor]
+    private Node _node;
+
+    public Node Node { get => _node; set => _node = value; }
 }

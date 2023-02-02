@@ -5,11 +5,10 @@ namespace ProjectRed.Extensions;
 
 public static class EcsExtensions
 {
-    public static void Add<T>(this EcsWorld world, in int entity) where T : struct
+    public static ref T Get<T>(this EcsPool<T> pool, in EcsPackedEntityWithWorld packedEntity) where T : struct
     {
-        var pool = world.GetPool<T>();
-
-        pool.Add(entity);
+        packedEntity.Unpack(out _, out int owner);
+        return ref pool.Get(owner);
     }
 
     public static void Add<T>(this EcsWorld world, in int entity, in T existing) where T : struct

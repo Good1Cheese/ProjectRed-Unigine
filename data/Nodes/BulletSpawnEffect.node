@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<nodes version="2.16.0.2">
-	<node type="NodeDummy" id="745144038" name="BulletSpawnEffect">
+<nodes version="2.16.1.0">
+	<node type="NodeDummy" id="539836521" name="BulletSpawnEffect">
 		<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0 0 0 1.0</transform>
-		<node type="SoundSource" id="500794470" name="SoundSource">
-			<sample_name>guid://368646ca6b2f07a129957c8c12520e7b4661b19e</sample_name>
+		<node type="SoundSource" id="813560294" name="SoundSource">
+			<sample_name>guid://8d2aae506eddad6f20a1fc020b438b7957403e84</sample_name>
 			<sample_stream>0</sample_stream>
 			<source_mask>0x1</source_mask>
 			<reverb_mask>0x1</reverb_mask>

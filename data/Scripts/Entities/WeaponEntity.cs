@@ -1,6 +1,5 @@
 using Leopotam.EcsLite;
 using ProjectRed.Extensions;
-using ProjectRed.Mechanics.Object;
 using ProjectRed.Mechanics.Weapon;
 using Unigine;
 using XorterDI;
@@ -24,7 +23,6 @@ public class WeaponEntity : Component, IEntity
         _weapon.Base = node.GetChild(0);
 
         world.Add(entity, _weapon);
-        world.Add<PlayerGameObject>(entity);
 
         PackedEntity = world.PackEntity(entity);
     }

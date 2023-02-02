@@ -3,10 +3,9 @@ using ProjectRed.Extensions;
 using ProjectRed.Mechanics.Delay;
 using ProjectRed.Mechanics.Move;
 using ProjectRed.Mechanics.Rotate;
-using ProjectRed.Mechanics.Weapon.Fire;
-using ProjectRed.Mechanics.Weapon.Intersection;
 using ProjectRed.Mechanics.Weapon.Pickup;
 using ProjectRed.Mechanics.Weapon;
+using ProjectRed.Mechanics.Intersection;
 using Unigine;
 
 namespace ProjectRed;

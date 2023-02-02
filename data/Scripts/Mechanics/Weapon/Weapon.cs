@@ -1,9 +1,8 @@
-﻿using System;
+﻿using Leopotam.EcsLite;
 using Unigine;
 
 namespace ProjectRed.Mechanics.Weapon;
 
-[Serializable]
 public struct Weapon
 {
     [ShowInEditor]
@@ -13,4 +12,5 @@ public struct Weapon
 
     public Node Node { get; set; }
     public Node Base { get; set; }
+    public EcsPackedEntityWithWorld Owner { get; set; }
 }

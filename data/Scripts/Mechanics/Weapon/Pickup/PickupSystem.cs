@@ -1,6 +1,6 @@
 ﻿using Leopotam.EcsLite;
 using ProjectRed.Entities;
-using ProjectRed.Mechanics.Weapon.Intersection;
+using ProjectRed.Mechanics.Intersection;
 using ProjectRed.Mechanics.Object;
 using Unigine;
 
@@ -12,6 +12,7 @@ public class PickupSystem : IEcsInitSystem, IEcsRunSystem
     private EcsPool<IntersectionMarker> _intersectionMarkerPool;
     private EcsPool<PickupMarker> _pickupMarkerPool;
     private EcsPool<OneFramePickupMarker> _oneFramePickupMarkerPool;
+    private EcsPool<Weapon> _weaponPool;
 
     public void Init(IEcsSystems systems)
     {
@@ -21,6 +22,7 @@ public class PickupSystem : IEcsInitSystem, IEcsRunSystem
         _intersectionMarkerPool = world.GetPool<IntersectionMarker>();
         _pickupMarkerPool = world.GetPool<PickupMarker>();
         _oneFramePickupMarkerPool = world.GetPool<OneFramePickupMarker>();
+        _weaponPool = world.GetPool<Weapon>();
     }
 
     public void Run(IEcsSystems systems)
@@ -34,17 +36,17 @@ public class PickupSystem : IEcsInitSystem, IEcsRunSystem
             ref var gameObject = ref _playerGameObject.Get(entity);
             ref var intersection = ref _intersectionMarkerPool.Get(entity);
 
-            var weaponNode = intersection.Result.GetComponentInParent<WeaponEntity>();
+            var WeaponNode = intersection.Result.GetComponentInParent<WeaponEntity>();
 
-            if (weaponNode == null) continue;
+            if (WeaponNode == null) continue;
 
-            if (weaponNode.PackedEntity.Unpack(world, out int unpacked))
+            if (WeaponNode.PackedEntity.Unpack(world, out int unpacked))
             {
-                _oneFramePickupMarkerPool.Add(unpacked);
-                _pickupMarkerPool.Add(unpacked);
+                ref var weapon = ref _weaponPool.Get(unpacked);
+                weapon.Owner = world.PackEntityWithWorld(entity);
 
-                ref var go = ref _playerGameObject.Get(unpacked);
-                go = gameObject;
+                _pickupMarkerPool.Add(unpacked);
+                _oneFramePickupMarkerPool.Add(unpacked);
             }
         }
     }
