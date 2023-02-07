@@ -48,6 +48,7 @@
 		<Compile Include="data\Scripts\EcsSystemsHandler.cs" />
 		<Compile Include="data\Scripts\EcsWorldHandler.cs" />
 		<Compile Include="data\Scripts\EntitiesSpawn.cs" />
+		<Compile Include="data\Scripts\Entities\BulletEntity.cs" />
 		<Compile Include="data\Scripts\Entities\PlayerEnity.cs" />
 		<Compile Include="data\Scripts\Entities\WeaponEntity.cs" />
 		<Compile Include="data\Scripts\Extensions\EcsExtensions.cs" />

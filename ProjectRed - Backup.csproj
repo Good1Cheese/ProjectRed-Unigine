@@ -19,81 +19,82 @@
 		<Platforms>x64</Platforms>
 		<PlatformTarget>x64</PlatformTarget>
 		<DebugType>portable</DebugType>
-		<DOTNET_HOST_PATH Condition="'$(DOTNET_HOST_PATH)' == ''">dotnet</DOTNET_HOST_PATH>
+		<DOTNET_HOST_PATH Condition="&apos;$(DOTNET_HOST_PATH)&apos; == &apos;&apos;">dotnet</DOTNET_HOST_PATH>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)'=='Debug'">
+	<PropertyGroup Condition="&apos;$(Configuration)&apos;==&apos;Debug&apos;">
 		<AssemblyName>ProjectRed_x64d</AssemblyName>
 		<DebugSymbols>true</DebugSymbols>
 		<Optimize>false</Optimize>
 		<DefineConstants>TRACE;DEBUG;</DefineConstants>
 	</PropertyGroup>
-	<ItemGroup Condition="'$(Configuration)'=='Debug'">
+	<ItemGroup Condition="&apos;$(Configuration)&apos;==&apos;Debug&apos;">
 		<Reference Include="UnigineSharp_x64d">
 			<SpecificVersion>false</SpecificVersion>
 			<HintPath>bin\UnigineSharp_x64d.dll</HintPath>
 		</Reference>
 	</ItemGroup>
-	<PropertyGroup Condition="'$(Configuration)'=='Release'">
+	<PropertyGroup Condition="&apos;$(Configuration)&apos;==&apos;Release&apos;">
 		<AssemblyName>ProjectRed_x64</AssemblyName>
 		<Optimize>true</Optimize>
 		<DefineConstants>TRACE;NDEBUG;</DefineConstants>
 	</PropertyGroup>
-	<ItemGroup Condition="'$(Configuration)'=='Release'">
+	<ItemGroup Condition="&apos;$(Configuration)&apos;==&apos;Release&apos;">
 		<Reference Include="UnigineSharp_x64">
 			<SpecificVersion>false</SpecificVersion>
 			<HintPath>bin\UnigineSharp_x64.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 	<ItemGroup>
-		<Compile Include="data\Scripts\EcsSystemsHandler.cs" />
-		<Compile Include="data\Scripts\EcsWorldHandler.cs" />
-		<Compile Include="data\Scripts\EntitiesSpawn.cs" />
-		<Compile Include="data\Scripts\Entities\PlayerEnity.cs" />
-		<Compile Include="data\Scripts\Entities\WeaponEntity.cs" />
-		<Compile Include="data\Scripts\Extensions\EcsExtensions.cs" />
-		<Compile Include="data\Scripts\Extensions\InputExtensions.cs" />
-		<Compile Include="data\Scripts\Extensions\OneFrameDeleteSystem.cs" />
-		<Compile Include="data\Scripts\GameInstaller.cs" />
-		<Compile Include="data\Scripts\Mechanics\Delay\DelayHandlerSystem.cs" />
-		<Compile Include="data\Scripts\Mechanics\Delay\DelayMarker.cs" />
-		<Compile Include="data\Scripts\Mechanics\Intersection\Intersection.cs" />
-		<Compile Include="data\Scripts\Mechanics\Intersection\IntersectionMarker.cs" />
-		<Compile Include="data\Scripts\Mechanics\Intersection\IntersectionSystem.cs" />
-		<Compile Include="data\Scripts\Mechanics\Move\MoveInputSystem.cs" />
-		<Compile Include="data\Scripts\Mechanics\Move\Movement.cs" />
-		<Compile Include="data\Scripts\Mechanics\Move\MoveSystem.cs" />
-		<Compile Include="data\Scripts\Mechanics\Object\GameObject.cs" />
-		<Compile Include="data\Scripts\Mechanics\Object\PlayerGameObject.cs" />
-		<Compile Include="data\Scripts\Mechanics\Rotate\RotateInputSystem.cs" />
-		<Compile Include="data\Scripts\Mechanics\Rotate\RotateSystem.cs" />
-		<Compile Include="data\Scripts\Mechanics\Rotate\Rotation.cs" />
-		<Compile Include="data\Scripts\Mechanics\Weapon\ArmSystem.cs" />
-		<Compile Include="data\Scripts\Mechanics\Weapon\FireSystem.cs" />
-		<Compile Include="data\Scripts\Mechanics\Weapon\Pickup\OneFramePickupMarker.cs" />
-		<Compile Include="data\Scripts\Mechanics\Weapon\Pickup\PickupMarker.cs" />
-		<Compile Include="data\Scripts\Mechanics\Weapon\Pickup\PickupSystem.cs" />
-		<Compile Include="data\Scripts\Mechanics\Weapon\ThrowSystem.cs" />
-		<Compile Include="data\Scripts\Mechanics\Weapon\Weapon.cs" />
-		<Compile Include="data\Scripts\SpawnableEntity.cs" />
-		<Compile Include="LeoEcsLite\src\components.cs" />
-		<Compile Include="LeoEcsLite\src\entities.cs" />
-		<Compile Include="LeoEcsLite\src\filters.cs" />
-		<Compile Include="LeoEcsLite\src\systems.cs" />
-		<Compile Include="LeoEcsLite\src\worlds.cs" />
+		<Compile Include="data\Scripts\EcsSystemsHandler.cs"/>
+		<Compile Include="data\Scripts\EcsWorldHandler.cs"/>
+		<Compile Include="data\Scripts\EntitiesSpawn.cs"/>
+		<Compile Include="data\Scripts\Entities\PlayerEnity.cs"/>
+		<Compile Include="data\Scripts\Entities\WeaponEntity.cs"/>
+		<Compile Include="data\Scripts\Extensions\EcsExtensions.cs"/>
+		<Compile Include="data\Scripts\Extensions\InputExtensions.cs"/>
+		<Compile Include="data\Scripts\Extensions\OneFrameDeleteSystem.cs"/>
+		<Compile Include="data\Scripts\Mechanics\Delay\DelayHandlerSystem.cs"/>
+		<Compile Include="data\Scripts\Mechanics\Delay\DelayMarker.cs"/>
+		<Compile Include="data\Scripts\Mechanics\Intersection\Intersection.cs"/>
+		<Compile Include="data\Scripts\Mechanics\Intersection\IntersectionMarker.cs"/>
+		<Compile Include="data\Scripts\Mechanics\Intersection\IntersectionSystem.cs"/>
+		<Compile Include="data\Scripts\Mechanics\Move\MoveInputSystem.cs"/>
+		<Compile Include="data\Scripts\Mechanics\Move\Movement.cs"/>
+		<Compile Include="data\Scripts\Mechanics\Move\MoveSystem.cs"/>
+		<Compile Include="data\Scripts\Mechanics\Object\GameObject.cs"/>
+		<Compile Include="data\Scripts\Mechanics\Object\PlayerGameObject.cs"/>
+		<Compile Include="data\Scripts\Mechanics\Rotate\RotateInputSystem.cs"/>
+		<Compile Include="data\Scripts\Mechanics\Rotate\RotateSystem.cs"/>
+		<Compile Include="data\Scripts\Mechanics\Rotate\Rotation.cs"/>
+		<Compile Include="data\Scripts\Mechanics\Weapon\ArmSystem.cs"/>
+		<Compile Include="data\Scripts\Mechanics\Weapon\FireSystem.cs"/>
+		<Compile Include="data\Scripts\Mechanics\Weapon\Pickup\OneFramePickupMarker.cs"/>
+		<Compile Include="data\Scripts\Mechanics\Weapon\Pickup\PickupMarker.cs"/>
+		<Compile Include="data\Scripts\Mechanics\Weapon\Pickup\PickupSystem.cs"/>
+		<Compile Include="data\Scripts\Mechanics\Weapon\ThrowSystem.cs"/>
+		<Compile Include="data\Scripts\Mechanics\Weapon\Weapon.cs"/>
+		<Compile Include="data\Scripts\SpawnableEntity.cs"/>
+		<Compile Include="LeoEcsLite\src\components.cs"/>
+		<Compile Include="LeoEcsLite\src\entities.cs"/>
+		<Compile Include="LeoEcsLite\src\filters.cs"/>
+		<Compile Include="LeoEcsLite\src\systems.cs"/>
+		<Compile Include="LeoEcsLite\src\worlds.cs"/>
+		<Compile Include="data/Scripts/Entities/BulletEntity.cs"/>
+		<Compile Include="data/Scripts/GameInstaller.cs"/>
 	</ItemGroup>
 	<ItemGroup>
-		<Compile Include="source\AppEditorLogic.cs" />
-		<Compile Include="source\AppSystemLogic.cs" />
-		<Compile Include="source\AppWorldLogic.cs" />
-		<Compile Include="source\main.cs" />
-		<Compile Include="XorterDI\Container.cs" />
-		<Compile Include="XorterDI\IEntity.cs" />
-		<Compile Include="XorterDI\InjectAttribute.cs" />
-		<Compile Include="XorterDI\Installer.cs" />
-		<Compile Include="XorterDI\XorterDIException.cs" />
+		<Compile Include="source\AppEditorLogic.cs"/>
+		<Compile Include="source\AppSystemLogic.cs"/>
+		<Compile Include="source\AppWorldLogic.cs"/>
+		<Compile Include="source\main.cs"/>
+		<Compile Include="XorterDI\Container.cs"/>
+		<Compile Include="XorterDI\IEntity.cs"/>
+		<Compile Include="XorterDI\InjectAttribute.cs"/>
+		<Compile Include="XorterDI\Installer.cs"/>
+		<Compile Include="XorterDI\XorterDIException.cs"/>
 	</ItemGroup>
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-		<Exec Command="&quot;$(DOTNET_HOST_PATH)&quot; &quot;$(OutputPath)cspropgen_x64d.dll&quot; -p &quot;$(OutputPath)$(AssemblyName).dll&quot; -data_path ../data/" Condition="'$(Configuration)'=='Debug' And $(SkipPostBuild)=='false'" />
-		<Exec Command="&quot;$(DOTNET_HOST_PATH)&quot; &quot;$(OutputPath)cspropgen_x64.dll&quot; -p &quot;$(OutputPath)$(AssemblyName).dll&quot; -data_path ../data/" Condition="'$(Configuration)'=='Release' And $(SkipPostBuild)=='false'" />
+		<Exec Command="&quot;$(DOTNET_HOST_PATH)&quot; &quot;$(OutputPath)cspropgen_x64d.dll&quot; -p &quot;$(OutputPath)$(AssemblyName).dll&quot; -data_path ../data/" Condition="&apos;$(Configuration)&apos;==&apos;Debug&apos; And $(SkipPostBuild)==&apos;false&apos;"/>
+		<Exec Command="&quot;$(DOTNET_HOST_PATH)&quot; &quot;$(OutputPath)cspropgen_x64.dll&quot; -p &quot;$(OutputPath)$(AssemblyName).dll&quot; -data_path ../data/" Condition="&apos;$(Configuration)&apos;==&apos;Release&apos; And $(SkipPostBuild)==&apos;false&apos;"/>
 	</Target>
 </Project>

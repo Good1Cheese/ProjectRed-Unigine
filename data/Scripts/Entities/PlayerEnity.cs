@@ -7,6 +7,8 @@ using ProjectRed.Mechanics.Rotate;
 using Unigine;
 using XorterDI;
 
+namespace ProjectRed.Entities;
+
 [Component(PropertyGuid = "808d35ed4b3c1e68fac1eea78bad9bdab8a2b971")]
 public class PlayerEntity : Component, IEntity
 {

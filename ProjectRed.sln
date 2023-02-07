@@ -4,10 +4,6 @@ VisualStudioVersion = 17.5.33103.201
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectRed", "ProjectRed.csproj", "{4CD972DE-2D5D-4155-9BFD-7D0BD3CE57F7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeoEcsLite", "LeoEcsLite\LeoEcsLite.csproj", "{2F1A2434-6C09-4390-A6C2-E996F91726A1}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XorterDI", "..\..\C#\XorterDI\XorterDI.csproj", "{9D8184CF-291B-4DC3-847E-317F3CF79BC7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,22 +20,6 @@ Global
 		{4CD972DE-2D5D-4155-9BFD-7D0BD3CE57F7}.Release|Any CPU.Build.0 = Release|x64
 		{4CD972DE-2D5D-4155-9BFD-7D0BD3CE57F7}.Release|x64.ActiveCfg = Release|x64
 		{4CD972DE-2D5D-4155-9BFD-7D0BD3CE57F7}.Release|x64.Build.0 = Release|x64
-		{2F1A2434-6C09-4390-A6C2-E996F91726A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2F1A2434-6C09-4390-A6C2-E996F91726A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2F1A2434-6C09-4390-A6C2-E996F91726A1}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{2F1A2434-6C09-4390-A6C2-E996F91726A1}.Debug|x64.Build.0 = Debug|Any CPU
-		{2F1A2434-6C09-4390-A6C2-E996F91726A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2F1A2434-6C09-4390-A6C2-E996F91726A1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2F1A2434-6C09-4390-A6C2-E996F91726A1}.Release|x64.ActiveCfg = Release|Any CPU
-		{2F1A2434-6C09-4390-A6C2-E996F91726A1}.Release|x64.Build.0 = Release|Any CPU
-		{9D8184CF-291B-4DC3-847E-317F3CF79BC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9D8184CF-291B-4DC3-847E-317F3CF79BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9D8184CF-291B-4DC3-847E-317F3CF79BC7}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{9D8184CF-291B-4DC3-847E-317F3CF79BC7}.Debug|x64.Build.0 = Debug|Any CPU
-		{9D8184CF-291B-4DC3-847E-317F3CF79BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9D8184CF-291B-4DC3-847E-317F3CF79BC7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9D8184CF-291B-4DC3-847E-317F3CF79BC7}.Release|x64.ActiveCfg = Release|Any CPU
-		{9D8184CF-291B-4DC3-847E-317F3CF79BC7}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

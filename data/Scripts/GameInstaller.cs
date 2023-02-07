@@ -3,7 +3,7 @@ using XorterDI;
 
 namespace ProjectRed;
 
-[Component(PropertyGuid = "48ed6eb75a797caa68e0040135808d6cfbdb29db")]
+[Component(PropertyGuid = "05888544ed1acfd341349316dbdb2f7d5eb12ab8")]
 public class GameInstaller : Installer
 {
     public override void InstallBindings()

@@ -749,10 +749,13 @@
 			<properties>
 				<property parent="4fbd8b2465035c33b551f3f6ebd25adde5e69e98" guid="59ccd165da20d3800bdeb0dfd6fdc8b2deab1069"/>
 				<property parent="b518793a05a437515ab9087c6551c9aba9a3530e" guid="a38e18188297bc97be06b10ad749ece1c18aa0cc"/>
-				<property/>
+				<property parent="05888544ed1acfd341349316dbdb2f7d5eb12ab8" guid="3af1bad5c9f34e3011a10bcf738806e2f92758d9"/>
 				<property parent="83316764ade70b733df55a36f31c0c1df0841ed8" guid="c4a1e79f5978107239373529546bfc7433d4fd43">
 					<parameter name="_entities">
-						<value index="0"/>
+						<value index="0">
+							<parameter name="_position">0 0 1</parameter>
+							<parameter name="_nodeLink">guid://d5b3e173c6a03836a63d521d2118acd8a0a5ca57</parameter>
+						</value>
 					</parameter>
 				</property>
 			</properties>
@@ -763,11 +766,11 @@
 			<properties>
 				<property parent="16556aacd211e61b81a964be26bac505dbe7f2a0" guid="4336d059d5ebfde4ebd7aff35538b4b6ce16a49d">
 					<parameter name="_weapon">
-						<parameter name="_delayAfterShotInMilliseconds">1.5</parameter>
+						<parameter name="_delayAfterShotInMilliseconds">1500</parameter>
 					</parameter>
 				</property>
 			</properties>
-			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 0.81814981 1.5911419 0.40820652 1.0</transform>
+			<transform>1 0 0 0.0 0 1 0 0.0 0 0 1 0.0 1 0 0 1.0</transform>
 		</node>
 	</editor>
 	<console>
