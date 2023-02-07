@@ -1,17 +1,17 @@
 ﻿using Leopotam.EcsLite;
 using ProjectRed.Extensions;
 using ProjectRed.Mechanics.Object;
-using ProjectRed.Mechanics.Weapon.Pickup;
+using ProjectRed.Mechanics.Fireable.Pickup;
 using Unigine;
 
-namespace ProjectRed.Mechanics.Weapon;
+namespace ProjectRed.Mechanics.Fireable;
 
 public class ThrowSystem : IEcsInitSystem, IEcsRunSystem
 {
     public const Input.MOUSE_BUTTON ThrowKey = Input.MOUSE_BUTTON.RIGHT;
 
     private EcsPool<Weapon> _weaponPool;
-    private EcsPool<PlayerGameObject> _playerGameObjectPool;
+    private EcsPool<Object.Player> _playerPool;
     private EcsPool<PickupMarker> _pickupMarkerPool;
 
     public void Init(IEcsSystems systems)
@@ -19,7 +19,7 @@ public class ThrowSystem : IEcsInitSystem, IEcsRunSystem
         var world = systems.GetWorld();
 
         _weaponPool = world.GetPool<Weapon>();
-        _playerGameObjectPool = world.GetPool<PlayerGameObject>();
+        _playerPool = world.GetPool<Object.Player>();
         _pickupMarkerPool = world.GetPool<PickupMarker>();
     }
 
@@ -34,7 +34,7 @@ public class ThrowSystem : IEcsInitSystem, IEcsRunSystem
         foreach (int entity in filter)
         {
             ref var weapon = ref _weaponPool.Get(entity);
-            ref var gameObject = ref _playerGameObjectPool.Get(weapon.Owner);
+            ref var gameObject = ref _playerPool.Get(weapon.Owner);
 
             weapon.Node.SetWorldParent(null);
 

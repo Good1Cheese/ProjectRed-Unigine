@@ -1,22 +1,22 @@
 ﻿using Leopotam.EcsLite;
 using ProjectRed.Extensions;
 using ProjectRed.Mechanics.Object;
-using ProjectRed.Mechanics.Weapon.Pickup;
+using ProjectRed.Mechanics.Fireable.Pickup;
 using Unigine;
 
-namespace ProjectRed.Mechanics.Weapon;
+namespace ProjectRed.Mechanics.Fireable;
 
 public class ArmSystem : IEcsInitSystem, IEcsRunSystem
 {
     private EcsPool<Weapon> _weaponPool;
-    private EcsPool<PlayerGameObject> _playerGameObjectPool;
+    private EcsPool<Object.Player> _playerPool;
 
     public void Init(IEcsSystems systems)
     {
         var world = systems.GetWorld();
 
         _weaponPool = world.GetPool<Weapon>();
-        _playerGameObjectPool = world.GetPool<PlayerGameObject>();
+        _playerPool = world.GetPool<Object.Player>();
     }
 
     public void Run(IEcsSystems systems)
@@ -28,7 +28,7 @@ public class ArmSystem : IEcsInitSystem, IEcsRunSystem
         foreach (int entity in filter)
         {
             ref var weapon = ref _weaponPool.Get(entity);
-            ref var gameObject = ref _playerGameObjectPool.Get(weapon.Owner);
+            ref var gameObject = ref _playerPool.Get(weapon.Owner);
 
             BodyRigid rigid = weapon.Base.ObjectBodyRigid;
             rigid.Gravity = false;

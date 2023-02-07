@@ -4,11 +4,11 @@ using ProjectRed.Mechanics.Intersection;
 using ProjectRed.Mechanics.Object;
 using Unigine;
 
-namespace ProjectRed.Mechanics.Weapon.Pickup;
+namespace ProjectRed.Mechanics.Fireable.Pickup;
 
 public class PickupSystem : IEcsInitSystem, IEcsRunSystem
 {
-    private EcsPool<PlayerGameObject> _playerGameObject;
+    private EcsPool<Object.Player> _playerGameObject;
     private EcsPool<IntersectionMarker> _intersectionMarkerPool;
     private EcsPool<PickupMarker> _pickupMarkerPool;
     private EcsPool<OneFramePickupMarker> _oneFramePickupMarkerPool;
@@ -18,7 +18,7 @@ public class PickupSystem : IEcsInitSystem, IEcsRunSystem
     {
         var world = systems.GetWorld();
 
-        _playerGameObject = world.GetPool<PlayerGameObject>();
+        _playerGameObject = world.GetPool<Object.Player>();
         _intersectionMarkerPool = world.GetPool<IntersectionMarker>();
         _pickupMarkerPool = world.GetPool<PickupMarker>();
         _oneFramePickupMarkerPool = world.GetPool<OneFramePickupMarker>();
@@ -29,7 +29,7 @@ public class PickupSystem : IEcsInitSystem, IEcsRunSystem
     {
         var world = systems.GetWorld();
 
-        EcsFilter filter = world.Filter<PlayerGameObject>().Inc<IntersectionComponent>().Inc<IntersectionMarker>().End();
+        EcsFilter filter = world.Filter<Object.Player>().Inc<IntersectionComponent>().Inc<IntersectionMarker>().End();
 
         foreach (int entity in filter)
         {

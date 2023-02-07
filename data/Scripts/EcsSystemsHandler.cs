@@ -3,8 +3,8 @@ using ProjectRed.Extensions;
 using ProjectRed.Mechanics.Delay;
 using ProjectRed.Mechanics.Move;
 using ProjectRed.Mechanics.Rotate;
-using ProjectRed.Mechanics.Weapon.Pickup;
-using ProjectRed.Mechanics.Weapon;
+using ProjectRed.Mechanics.Fireable.Pickup;
+using ProjectRed.Mechanics.Fireable;
 using ProjectRed.Mechanics.Intersection;
 using Unigine;
 

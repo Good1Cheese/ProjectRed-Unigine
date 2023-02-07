@@ -13,10 +13,13 @@ namespace ProjectRed.Entities;
 public class PlayerEntity : Component, IEntity
 {
     [ShowInEditor]
-    private PlayerGameObject _player;
+    private Mechanics.Object.Player _player;
 
     [ShowInEditor]
     private GameObject _gameObject;
+
+    [ShowInEditor]
+    private Bullet _bullet;
 
     [ShowInEditor]
     private Movement _movement;
@@ -34,6 +37,7 @@ public class PlayerEntity : Component, IEntity
 
         world.Add(entity, _player);
         world.Add(entity, _gameObject);
+        world.Add(entity, _bullet);
         world.Add(entity, _movement);
         world.Add(entity, _rotation);
         world.Add(entity, _interaction);

@@ -1,7 +1,7 @@
 ﻿using Leopotam.EcsLite;
 using Unigine;
 
-namespace ProjectRed.Mechanics.Weapon;
+namespace ProjectRed.Mechanics.Object;
 
 public struct Weapon
 {

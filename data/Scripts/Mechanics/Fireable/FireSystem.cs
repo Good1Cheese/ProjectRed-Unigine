@@ -1,20 +1,21 @@
 ﻿using Leopotam.EcsLite;
 using ProjectRed.Mechanics.Delay;
 using ProjectRed.Mechanics.Object;
-using ProjectRed.Mechanics.Weapon.Pickup;
+using ProjectRed.Mechanics.Fireable.Pickup;
 using ProjectRed.Extensions;
 using Unigine;
 using ProjectRed.Mechanics.Move;
 using ProjectRed.Entities;
 
-namespace ProjectRed.Mechanics.Weapon;
+namespace ProjectRed.Mechanics.Fireable;
 
 public class FireSystem : IEcsInitSystem, IEcsRunSystem
 {
     public const Input.MOUSE_BUTTON FireKey = Input.MOUSE_BUTTON.LEFT;
 
     private EcsPool<Weapon> _weaponPool;
-    private EcsPool<PlayerGameObject> _playerGameObjectPool;
+    private EcsPool<Bullet> _bulletPool;
+    private EcsPool<Object.Player> _playerPool;
     private EcsPool<DelayMarker> _delayMarkerPool;
 
     public void Init(IEcsSystems systems)
@@ -22,7 +23,8 @@ public class FireSystem : IEcsInitSystem, IEcsRunSystem
         var world = systems.GetWorld();
 
         _weaponPool = world.GetPool<Weapon>();
-        _playerGameObjectPool = world.GetPool<PlayerGameObject>();
+        _bulletPool = world.GetPool<Bullet>();
+        _playerPool = world.GetPool<Object.Player>();
         _delayMarkerPool = world.GetPool<DelayMarker>();
     }
 
@@ -37,10 +39,11 @@ public class FireSystem : IEcsInitSystem, IEcsRunSystem
         foreach (int entity in filter)
         {
             ref var weapon = ref _weaponPool.Get(entity);
-            ref var gameObject = ref _playerGameObjectPool.Get(weapon.Owner);
+            ref var player = ref _playerPool.Get(weapon.Owner);
+            ref var bullet = ref _bulletPool.Get(weapon.Owner);
 
-            var bullet = new BulletEntity(world);
-            bullet.Spawn(gameObject);
+            var bulletEntity = new BulletEntity(world);
+            bulletEntity.Spawn(player, bullet);
 
             ref var delayMarker = ref _delayMarkerPool.Add(entity);
             delayMarker.Milliseconds = weapon.DelayAfterShotInMilliseconds;

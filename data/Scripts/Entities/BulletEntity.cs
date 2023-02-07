@@ -15,18 +15,26 @@ public class BulletEntity
         _world = world;
     }
 
-    public void Spawn(in PlayerGameObject player)
+    public void Spawn(in Mechanics.Object.Player player, in Bullet bullet)
     {
-        Node bullet = World.LoadNode(player.Bullet);
-        Node spawnEffect = World.LoadNode(player.BulletSpawnEffect);
+        Node result = World.LoadNode(bullet.Prefab);
+        Node spawnEffect = World.LoadNode(bullet.SpawnEffect);
 
-        bullet.WorldTransform = player.BulletsSpawnPoint.WorldTransform;
+        result.WorldTransform = player.BulletsSpawnPoint.WorldTransform;
         spawnEffect.WorldPosition = player.BulletsSpawnPoint.WorldPosition;
 
-        int entity = _world.NewEntity();
+        GameObject gameObject = new() 
+        {
+            Node = result
+        };
 
-        GameObject gameObject = new() { Node = bullet };
-        Movement movement = new() { Speed = 0.5f, Input = player.BulletsSpawnPoint.GetDirection(MathLib.AXIS.Y) };
+        Movement movement = new() 
+        {
+            Speed = bullet.Speed,
+            Input = player.BulletsSpawnPoint.GetDirection(MathLib.AXIS.Y) 
+        };
+
+        int entity = _world.NewEntity();
 
         _world.Add(entity, gameObject);
         _world.Add(entity, movement);

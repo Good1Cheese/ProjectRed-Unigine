@@ -1,6 +1,6 @@
 using Leopotam.EcsLite;
 using ProjectRed.Extensions;
-using ProjectRed.Mechanics.Weapon;
+using ProjectRed.Mechanics.Object;
 using Unigine;
 using XorterDI;
 
